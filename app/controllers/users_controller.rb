@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   end
 
   # POST /users
+
   def create
     @user = User.new(user_params)
 
