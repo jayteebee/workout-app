@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   resources :exercises
   resources :workouts
   resources :routines
+get '/routines/:id/workouts', to: 'routines#workouts'
+put '/routines/:id/workouts', to: 'routines#add_workout'
+
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

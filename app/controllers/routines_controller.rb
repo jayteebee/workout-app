@@ -1,5 +1,5 @@
 class RoutinesController < ApplicationController
-  before_action :set_routine, only: %i[ show update destroy ]
+  before_action :set_routine, only: %i[ show update destroy workouts add_workout ]
 
   # GET /routines
   def index
@@ -12,6 +12,11 @@ class RoutinesController < ApplicationController
   def show
     render json: @routine
   end
+
+# GET /routines/1/workouts
+def workouts
+  render json: @routine.workouts
+end
 
   # POST /routines
   def create
@@ -32,6 +37,16 @@ class RoutinesController < ApplicationController
       render json: @routine.errors, status: :unprocessable_entity
     end
   end
+
+def add_workout
+  @workout = Workout.find(params[:workout_id])
+  @routine.workouts << @workout
+  if @routine.save
+    render json: @routine
+  else 
+    render json: @root.errors, status: :unprocessable_entity
+  end
+end
 
   # DELETE /routines/1
   def destroy
