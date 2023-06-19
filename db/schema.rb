@@ -39,6 +39,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_19_181903) do
     t.datetime "updated_at", null: false
   end
 
+  # The workouts that belong to a routine
   create_table "routine_workouts", force: :cascade do |t|
     t.bigint "routine_id", null: false
     t.bigint "workout_id", null: false
