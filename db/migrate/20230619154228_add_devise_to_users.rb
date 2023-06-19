@@ -27,4 +27,4 @@ class AddDeviseToUsers < ActiveRecord::Migration[7.0]
     add_index :users, :reset_password_token, unique: true
   end
   end
-end
+
