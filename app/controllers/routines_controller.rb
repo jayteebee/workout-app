@@ -38,6 +38,7 @@ end
     end
   end
 
+  # PUT /routines/1/workouts
 def add_workout
   @workout = Workout.find(params[:workout_id])
   @routine.workouts << @workout
@@ -52,6 +53,11 @@ end
   def destroy
     @routine.destroy
   end
+
+def delete_workout
+  @workout = Workout.find(params[:workout_id])
+  @workout.destroy
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.
