@@ -14,6 +14,10 @@ class WorkoutsController < ApplicationController
     render json: @workout
   end
 
+def exercises
+render json: @workout.exercises
+end
+
   # POST REQUESTS
   # /workouts
   def create
