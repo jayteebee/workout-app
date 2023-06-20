@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :exercises
   resources :workouts
   get '/workouts/:workout_id/exercises', to: 'workouts#exercises'
+  put '/workouts/:workout_id/exercises', to: 'workouts#add_exercise'
 
 
   resources :routines

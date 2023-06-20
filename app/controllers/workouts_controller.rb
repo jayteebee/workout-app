@@ -1,5 +1,5 @@
 class WorkoutsController < ApplicationController
-  before_action :set_workout, only: %i[ show update destroy ]
+  before_action :set_workout, only: %i[ show update destroy exercises ]
 
   # GET Requests
   # /workouts
@@ -14,6 +14,7 @@ class WorkoutsController < ApplicationController
     render json: @workout
   end
 
+  # /workouts/1/exercises
 def exercises
 render json: @workout.exercises
 end
@@ -40,6 +41,16 @@ end
     end
   end
 
+def add_exercise
+  @exercise = Exercise.find(params[:exercise_id])
+  @workout.exercises << @exercise
+  if @workout.save
+    render json: @workout
+  else
+    render json: @root.errors, status: :unprocessable_entity
+end
+end
+
   # DELETE REQUESTS
   # /workouts/1
   def destroy
@@ -49,7 +60,7 @@ end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_workout
-      @workout = Workout.find(params[:id])
+      @workout = Workout.find(params[:workout_id])
     end
 
     # Only allow a list of trusted parameters through.
