@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+seed_data = JSON.parse(File.read('db/seed_data.json')) 
+
+seed_data.each do |exercise|
+    Exercise.create!(
+        name: exercise['name'],
+        equipment_used: exercise['equipment_used'],
+        primary_muscles: exercise['primary_muscles'],
+        secondary_muscles: exercise['secondary_muscles']
+    )
+end
