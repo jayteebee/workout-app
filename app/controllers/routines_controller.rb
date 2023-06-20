@@ -1,5 +1,6 @@
 class RoutinesController < ApplicationController
-  before_action :set_routine, only: %i[ show update destroy workouts add_workout delete_workout ]
+  before_action :set_routine_for_show_update_destroy, only: %i[ show update destroy ]
+  before_action :set_routine_for_nested_resources, only: %i[ workouts add_workout delete_workout ]
 
   # GET REQUESTS
   # /routines
@@ -65,7 +66,12 @@ end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_routine
+    
+    def set_routine_for_show_update_destroy
+      @routine = Routine.find(params[:id])
+    end
+    
+    def set_routine_for_nested_resources
       @routine = Routine.find(params[:routine_id])
     end
 
