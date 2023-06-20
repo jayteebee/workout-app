@@ -1,5 +1,5 @@
 class WorkoutsController < ApplicationController
-  before_action :set_workout, only: %i[ show update destroy exercises ]
+  before_action :set_workout, only: %i[ show update destroy exercises add_exercise ]
 
   # GET Requests
   # /workouts
