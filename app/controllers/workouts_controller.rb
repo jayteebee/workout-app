@@ -44,11 +44,15 @@ end
   # /workouts/1/exercises
 def add_exercise
   @exercise = Exercise.find(params[:exercise_id])
-  @workout.exercises << @exercise
-  if @workout.save
+  workout_exercise = WorkoutExercise.new(workout: @workout, exercise: @exercise)
+  workout_exercise.sets = params[:sets]
+  workout_exercise.reps = params[:reps]
+  workout_exercise.weight = params[:weight]
+
+  if workout_exercise .save
     render json: @workout
   else
-    render json: @root.errors, status: :unprocessable_entity
+    render json: workout_exercise.errors, status: :unprocessable_entity
 end
 end
 
