@@ -1,19 +1,21 @@
 class WorkoutsController < ApplicationController
   before_action :set_workout, only: %i[ show update destroy ]
 
-  # GET /workouts
+  # GET Requests
+  # /workouts
   def index
     @workouts = Workout.all
 
     render json: @workouts
   end
 
-  # GET /workouts/1
+  # /workouts/1
   def show
     render json: @workout
   end
 
-  # POST /workouts
+  # POST REQUESTS
+  # /workouts
   def create
     @workout = Workout.new(workout_params)
 
@@ -24,7 +26,8 @@ class WorkoutsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /workouts/1
+  # PATCH/PUT REQUESTS
+  # /workouts/1
   def update
     if @workout.update(workout_params)
       render json: @workout
@@ -33,7 +36,8 @@ class WorkoutsController < ApplicationController
     end
   end
 
-  # DELETE /workouts/1
+  # DELETE REQUESTS
+  # /workouts/1
   def destroy
     @workout.destroy
   end
