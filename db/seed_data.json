@@ -18,11 +18,23 @@
             "Chest"
         ],
         "secondaryMuscles": [
-            "Shoulders"
+            "Shoulders",
+            "Triceps"
         ]
     },
     {
-        "exerciseName": "Cable Crossover",
+        "exerciseName": "High Cable Crossover",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Chest"
+        ],
+        "secondaryMuscles": [
+            "Shoulders",
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Middle Cable Crossover",
         "equipmentUsed": "Cable Machine",
         "primaryMuscles": [
             "Chest"
@@ -44,56 +56,88 @@
         ]
     },
     {
+        "exerciseName": "Incline Pushups",
+        "equipmentUsed": "Bodyweight",
+        "primaryMuscles": [
+            "Chest",
+            "Triceps"
+        ],
+        "secondaryMuscles": [
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Decline Pushups",
+        "equipmentUsed": "Bodyweight",
+        "primaryMuscles": [
+            "Chest",
+            "Triceps"
+        ],
+        "secondaryMuscles": [
+            "Shoulders"
+        ]
+    },
+    {
         "exerciseName": "Dumbbell Shoulder Press",
         "equipmentUsed": "Dumbbells",
         "primaryMuscles": [
             "Shoulders"
         ],
         "secondaryMuscles": [
+            "Chest",
             "Triceps"
         ]
     },
     {
-        "exerciseName": "Lateral Raise",
-        "equipmentUsed": "Dumbbells",
+        "exerciseName": "Machine Lateral Raise",
+        "equipmentUsed": "Machine",
         "primaryMuscles": [
             "Shoulders"
         ],
-        "secondaryMuscles": []
+        "secondaryMuscles": ["Traps"]
     },
     {
-        "exerciseName": "Front Raise",
-        "equipmentUsed": "Dumbbells",
+        "exerciseName": "Cable Front Raise",
+        "equipmentUsed": "Cable Machine",
         "primaryMuscles": [
             "Shoulders"
         ],
-        "secondaryMuscles": []
+        "secondaryMuscles": ["Traps"]
     },
     {
         "exerciseName": "Barbell Row",
         "equipmentUsed": "Barbell",
         "primaryMuscles": [
-            "Back"
+            "Back",
+            "Lats",
+            "Upper Back",
+            "Lumbar Spine"
         ],
         "secondaryMuscles": [
-            "Biceps"
+            "Biceps",
+            "Forearms"
         ]
     },
     {
         "exerciseName": "Pullups",
         "equipmentUsed": "Bodyweight",
         "primaryMuscles": [
-            "Back"
+            "Back",
+"Lats",
+"Upper Back"
         ],
         "secondaryMuscles": [
-            "Biceps"
+            "Biceps",
+            "Forearms"
         ]
     },
     {
         "exerciseName": "Lat Pulldown",
         "equipmentUsed": "Cable Machine",
         "primaryMuscles": [
-            "Back"
+            "Back",
+            "Lats",
+            "Upper Back"
         ],
         "secondaryMuscles": [
             "Biceps"
@@ -104,12 +148,18 @@
         "equipmentUsed": "Barbell",
         "primaryMuscles": [
             "Back",
+            "Lats",
+            "Upper Back",
+            "Lumbar Spine",
             "Legs",
+            "Quadriceps",
+            "Hamstrings",
+            "Traps",
             "Glutes"
         ],
         "secondaryMuscles": [
-            "Forearms",
-            "Traps"
+            "Forearms"
+            
         ]
     },
     {
@@ -117,7 +167,11 @@
         "equipmentUsed": "Barbell",
         "primaryMuscles": [
             "Legs",
-            "Glutes"
+            "Quadriceps",
+            "Hamstrings",
+            "Glutes",
+            "Upper Back",
+            "Lumbar Spine"
         ],
         "secondaryMuscles": [
             "Lower Back",
@@ -129,6 +183,8 @@
         "equipmentUsed": "Machine",
         "primaryMuscles": [
             "Legs",
+            "Quadriceps",
+            "Hamstrings",
             "Glutes"
         ],
         "secondaryMuscles": []
@@ -165,7 +221,7 @@
         "primaryMuscles": [
             "Biceps"
         ],
-        "secondaryMuscles": []
+        "secondaryMuscles": ["Forearms"]
     },
     {
         "exerciseName": "Dumbbell Curl",
@@ -173,7 +229,7 @@
         "primaryMuscles": [
             "Biceps"
         ],
-        "secondaryMuscles": []
+        "secondaryMuscles": ["Forearms"]
     },
     {
         "exerciseName": "Tricep Dips",
@@ -183,6 +239,28 @@
         ],
         "secondaryMuscles": [
             "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Tricep Machine Dips",
+        "equipmentUsed": "Machine",
+        "primaryMuscles": [
+            "Triceps"
+        ],
+        "secondaryMuscles": [
+            "Shoulders",
+            "Chest"
+        ]
+    },
+    {
+        "exerciseName": "Chest Machine Dips",
+        "equipmentUsed": "Machine",
+        "primaryMuscles": [
+            "Chest"
+        ],
+        "secondaryMuscles": [
+            "Shoulders",
+            "Triceps"
         ]
     },
     {
@@ -238,10 +316,28 @@
         "secondaryMuscles": []
     },
     {
+        "exerciseName": "Preacher Curls",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Biceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Preacher Curls",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Biceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
         "exerciseName": "Bent-Over Rows",
         "equipmentUsed": "Barbell",
         "primaryMuscles": [
-            "Back"
+            "Back",
+            "Lats",
+            "Lower Back"
         ],
         "secondaryMuscles": [
             "Biceps",
@@ -252,7 +348,8 @@
         "exerciseName": "Seated Rows",
         "equipmentUsed": "Cable Machine",
         "primaryMuscles": [
-            "Back"
+            "Back",
+            "Lats"
         ],
         "secondaryMuscles": [
             "Biceps",
@@ -264,6 +361,8 @@
         "equipmentUsed": "Dumbbells",
         "primaryMuscles": [
             "Legs",
+            "Quadriceps",
+            "Hamstrings",
             "Glutes"
         ],
         "secondaryMuscles": [
@@ -276,6 +375,36 @@
         "equipmentUsed": "Bodyweight",
         "primaryMuscles": [
             "Legs",
+            "Hamstrings",
+            "Quadriceps",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Abs",
+            "Lower Back"
+        ]
+    },
+    {
+        "exerciseName": "Bulgarian Split Squats",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Legs",
+            "Hamstrings",
+            "Quadriceps",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Abs",
+            "Lower Back"
+        ]
+    },
+    {
+        "exerciseName": "Bulgarian Split Squats",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Legs",
+            "Hamstrings",
+            "Quadriceps",
             "Glutes"
         ],
         "secondaryMuscles": [
@@ -289,7 +418,7 @@
         "primaryMuscles": [
             "Hamstrings"
         ],
-        "secondaryMuscles": []
+        "secondaryMuscles": ["Calves"]
     },
     {
         "exerciseName": "Leg Extensions",
@@ -376,7 +505,7 @@
         "primaryMuscles": [
             "Shoulders"
         ],
-        "secondaryMuscles": []
+        "secondaryMuscles": ["Traps"]
     },
     {
         "exerciseName": "Barbell Shrug",
@@ -384,7 +513,7 @@
         "primaryMuscles": [
             "Traps"
         ],
-        "secondaryMuscles": []
+        "secondaryMuscles": ["Forearms"]
     },
     {
         "exerciseName": "Upright Rows",
@@ -410,7 +539,10 @@
         "exerciseName": "Pendlay Rows",
         "equipmentUsed": "Barbell",
         "primaryMuscles": [
-            "Back"
+            "Back",
+            "Lats",
+            "Upper Back"
+
         ],
         "secondaryMuscles": [
             "Biceps",
@@ -422,7 +554,8 @@
         "equipmentUsed": "Barbell",
         "primaryMuscles": [
             "Lower Back",
-            "Hamstrings"
+            "Hamstrings",
+            "Upper Back"
         ],
         "secondaryMuscles": [
             "Glutes"
@@ -432,11 +565,24 @@
         "exerciseName": "Hyperextensions",
         "equipmentUsed": "Bodyweight",
         "primaryMuscles": [
-            "Lower Back"
-        ],
-        "secondaryMuscles": [
+            "Lower Back",
             "Hamstrings",
             "Glutes"
+        ],
+        "secondaryMuscles": [
+            
+        ]
+    },
+    {
+        "exerciseName": "Barbell Hyperextensions",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Lower Back",
+            "Hamstrings",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            
         ]
     },
     {
@@ -444,10 +590,13 @@
         "equipmentUsed": "Barbell",
         "primaryMuscles": [
             "Hamstrings",
-            "Lower Back"
+            "Lower Back",
+            "Upper Back"
         ],
         "secondaryMuscles": [
-            "Glutes"
+            "Glutes",
+            "Forearms",
+            "Traps"
         ]
     },
     {
@@ -455,7 +604,9 @@
         "equipmentUsed": "Barbell",
         "primaryMuscles": [
             "Quadriceps",
-            "Glutes"
+            "Hamstrings",
+            "Glutes",
+            "Upper Back"
         ],
         "secondaryMuscles": [
             "Lower Back"
@@ -470,26 +621,29 @@
         ],
         "secondaryMuscles": [
             "Lower Back",
-            "Abs"
+            "Abs",
+            "Hamstrings"
         ]
     },
     {
         "exerciseName": "Goblet Squats",
-        "equipmentUsed": "Dumbbell",
+        "equipmentUsed": "Dumbbells",
         "primaryMuscles": [
             "Quadriceps",
             "Glutes"
         ],
         "secondaryMuscles": [
             "Lower Back",
-            "Abs"
+            "Abs",
+            "Hamstrings"
         ]
     },
     {
         "exerciseName": "T-Bar Rows",
         "equipmentUsed": "Barbell",
         "primaryMuscles": [
-            "Back"
+            "Back",
+            "Lats"
         ],
         "secondaryMuscles": [
             "Biceps",
@@ -498,9 +652,11 @@
     },
     {
         "exerciseName": "Single Arm Dumbbell Rows",
-        "equipmentUsed": "Dumbbell",
+        "equipmentUsed": "Dumbbells",
         "primaryMuscles": [
-            "Back"
+            "Back",
+            "Lats",
+            "Upper Back"
         ],
         "secondaryMuscles": [
             "Biceps"
@@ -533,14 +689,15 @@
         "primaryMuscles": [
             "Hamstrings"
         ],
-        "secondaryMuscles": []
+        "secondaryMuscles": ["Calves"]
     },
     {
         "exerciseName": "Hack Squat",
         "equipmentUsed": "Machine",
         "primaryMuscles": [
             "Quadriceps",
-            "Glutes"
+            "Glutes",
+            "Hamstrings"
         ],
         "secondaryMuscles": [
             "Calves"
@@ -579,7 +736,7 @@
         "secondaryMuscles": []
     },
     {
-        "exerciseName": "Lateral Pulldown",
+        "exerciseName": "Straight Arm Pulldown",
         "equipmentUsed": "Cable Machine",
         "primaryMuscles": [
             "Lats"
@@ -593,7 +750,8 @@
         "exerciseName": "Seated Cable Row",
         "equipmentUsed": "Cable Machine",
         "primaryMuscles": [
-            "Middle Back"
+            "Back",
+            "Lats"
         ],
         "secondaryMuscles": [
             "Biceps",
@@ -631,10 +789,12 @@
         ]
     },
     {
-        "exerciseName": "Dumbbell Row",
+        "exerciseName": "Kroc Row",
         "equipmentUsed": "Dumbbells",
         "primaryMuscles": [
-            "Back"
+            "Back",
+            "Lats",
+            "Upper Back"
         ],
         "secondaryMuscles": [
             "Biceps",
@@ -647,7 +807,7 @@
         "primaryMuscles": [
             "Traps"
         ],
-        "secondaryMuscles": []
+        "secondaryMuscles": ["Forearms"]
     },
     {
         "exerciseName": "Barbell Front Raise",
@@ -655,7 +815,7 @@
         "primaryMuscles": [
             "Shoulders"
         ],
-        "secondaryMuscles": []
+        "secondaryMuscles": ["Traps"]
     },
     {
         "exerciseName": "Dumbbell Front Raise",
@@ -663,10 +823,10 @@
         "primaryMuscles": [
             "Shoulders"
         ],
-        "secondaryMuscles": []
+        "secondaryMuscles": ["Traps"]
     },
     {
-        "exerciseName": "Cable Crossover",
+        "exerciseName": "Low Cable Crossover",
         "equipmentUsed": "Cable Machine",
         "primaryMuscles": [
             "Chest"
@@ -681,7 +841,7 @@
         "primaryMuscles": [
             "Shoulders"
         ],
-        "secondaryMuscles": []
+        "secondaryMuscles": ["Traps"]
     },
     {
         "exerciseName": "Cable Tricep Extension",
@@ -700,27 +860,23 @@
         "secondaryMuscles": []
     },
     {
+        "exerciseName": "Cable Hammer Curl",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Biceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
         "exerciseName": "Cable Seated Row",
         "equipmentUsed": "Cable Machine",
         "primaryMuscles": [
-            "Back"
+            "Back",
+            "Lats"
         ],
         "secondaryMuscles": [
             "Biceps",
             "Shoulders"
-        ]
-    },
-    {
-        "exerciseName": "Barbell Deadlift",
-        "equipmentUsed": "Barbell",
-        "primaryMuscles": [
-            "Back",
-            "Legs",
-            "Glutes"
-        ],
-        "secondaryMuscles": [
-            "Traps",
-            "Forearms"
         ]
     },
     {
@@ -752,27 +908,20 @@
         "equipmentUsed": "Dumbbells",
         "primaryMuscles": [
             "Quadriceps",
+            "Hamstrings",
             "Glutes"
         ],
         "secondaryMuscles": [
             "Hamstrings"
         ]
     },
-    {
-        "exerciseName": "Dumbbell Flyes",
-        "equipmentUsed": "Dumbbells",
-        "primaryMuscles": [
-            "Chest"
-        ],
-        "secondaryMuscles": [
-            "Shoulders"
-        ]
-    },
+   
     {
         "exerciseName": "Dumbbell Rear Lateral Raise",
         "equipmentUsed": "Dumbbells",
         "primaryMuscles": [
-            "Shoulders"
+            "Shoulders",
+            "Rear Delts"
         ],
         "secondaryMuscles": []
     },
@@ -810,6 +959,7 @@
         "equipmentUsed": "Barbell",
         "primaryMuscles": [
             "Glutes"
+            
         ],
         "secondaryMuscles": [
             "Hamstrings"
@@ -869,7 +1019,8 @@
             "Shoulders"
         ],
         "secondaryMuscles": [
-            "Triceps"
+            "Triceps",
+            "Chest"
         ]
     },
     {
@@ -905,10 +1056,20 @@
         "secondaryMuscles": []
     },
     {
+        "exerciseName": "Dumbbell Overhead Tricep Extension",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Triceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
         "exerciseName": "Barbell Bent Over Row",
         "equipmentUsed": "Barbell",
         "primaryMuscles": [
-            "Back"
+            "Back",
+            "Lats",
+            "Upper Back"
         ],
         "secondaryMuscles": [
             "Biceps"
@@ -921,7 +1082,8 @@
             "Chest"
         ],
         "secondaryMuscles": [
-            "Triceps"
+            "Triceps",
+            "Shoulders"
         ]
     },
     {
@@ -931,7 +1093,8 @@
             "Chest"
         ],
         "secondaryMuscles": [
-            "Triceps"
+            "Triceps",
+            "Shoulders"
         ]
     },
     {
@@ -941,7 +1104,9 @@
             "Shoulders"
         ],
         "secondaryMuscles": [
-            "Triceps"
+            "Triceps",
+            "Biceps",
+            "Chest"
         ]
     },
     {
@@ -984,7 +1149,7 @@
         "primaryMuscles": [
             "Traps"
         ],
-        "secondaryMuscles": []
+        "secondaryMuscles": ["Forearms"]
     },
     {
         "exerciseName": "Dumbbell Farmer's Walk",
@@ -1074,22 +1239,13 @@
         "equipmentUsed": "Barbell",
         "primaryMuscles": [
             "Back",
+            "Lats",
+            "Upper Back",
             "Glutes"
         ],
         "secondaryMuscles": [
             "Hamstrings",
             "Forearms"
-        ]
-    },
-    {
-        "exerciseName": "Dumbbell Pullover on Bench",
-        "equipmentUsed": "Dumbbells",
-        "primaryMuscles": [
-            "Chest",
-            "Lats"
-        ],
-        "secondaryMuscles": [
-            "Triceps"
         ]
     },
     {
@@ -1116,7 +1272,8 @@
         ],
         "secondaryMuscles": [
             "Glutes",
-            "Calves"
+            "Calves",
+            "Hamstrings"
         ]
     },
     {
@@ -1131,7 +1288,8 @@
         "exerciseName": "Dumbbell Incline Row",
         "equipmentUsed": "Dumbbells",
         "primaryMuscles": [
-            "Back"
+            "Back",
+            "Lats"
         ],
         "secondaryMuscles": [
             "Biceps",
@@ -1149,16 +1307,9 @@
             "Biceps"
         ]
     },
+ 
     {
-        "exerciseName": "Dumbbell Lateral Raise",
-        "equipmentUsed": "Dumbbells",
-        "primaryMuscles": [
-            "Shoulders"
-        ],
-        "secondaryMuscles": []
-    },
-    {
-        "exerciseName": "Barbell Calf Raise",
+        "exerciseName": "Barbell Standing Calf Raise",
         "equipmentUsed": "Barbell",
         "primaryMuscles": [
             "Calves"
@@ -1174,16 +1325,7 @@
         ],
         "secondaryMuscles": []
     },
-    {
-        "exerciseName": "Barbell Glute Bridge",
-        "equipmentUsed": "Barbell",
-        "primaryMuscles": [
-            "Glutes"
-        ],
-        "secondaryMuscles": [
-            "Hamstrings"
-        ]
-    },
+    
     {
         "exerciseName": "Dumbbell Bench Press",
         "equipmentUsed": "Dumbbells",
