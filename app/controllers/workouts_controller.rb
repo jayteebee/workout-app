@@ -1,5 +1,5 @@
 class WorkoutsController < ApplicationController
-  before_action :set_workout, only: %i[ show update destroy exercises add_exercise delete_exercise ]
+  before_action :set_workout, only: %i[ show update destroy exercises add_exercise delete_exercise update_exercise ]
 
   # GET Requests
   # /workouts
@@ -16,7 +16,8 @@ class WorkoutsController < ApplicationController
 
   # /workouts/1/exercises
 def exercises
-render json: @workout.exercises
+  workout_exercises = @workout.workout_exercises.includes(:exercise)
+render json: workout_exercises, include: :exercise
 end
 
   # POST REQUESTS
@@ -38,6 +39,25 @@ end
       render json: @workout
     else
       render json: @workout.errors, status: :unprocessable_entity
+    end
+  end
+
+  # /workouts/1/exercises/1
+  def update_exercise
+    @exercise = Exercise.find(params[:exercise_id])
+    workout_exercise = @workout.workout_exercises.find_by(exercise: @exercise)
+    if workout_exercise.nil?
+    render json: {error: 'Exercise not found in this workout'}, status: :not_found
+    else
+      workout_exercise.sets = params[:sets] if params[:sets]
+      workout_exercise.reps = params[:reps] if params[:reps]
+      workout_exercise.weight = params[:weight] if params[:weight]
+
+      if workout_exercise.save
+        render json: workout_exercise, status: :ok
+      else
+        render json: workout_exercise.errors, status: :unprocessable_entity
+      end
     end
   end
 

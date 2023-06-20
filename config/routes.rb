@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   resources :exercises
   resources :workouts
   get '/workouts/:workout_id/exercises', to: 'workouts#exercises'
-  put '/workouts/:workout_id/exercises', to: 'workouts#add_exercise'
+  post '/workouts/:workout_id/exercises', to: 'workouts#add_exercise'
+  put '/workouts/:workout_id/exercises/:exercise_id', to: 'workouts#update_exercise'
   delete '/workouts/:workout_id/exercises/:exercise_id', to: 'workouts#delete_exercise'
 
 
