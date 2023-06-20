@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_19_181903) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_20_124745) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  # For Recording the exercises done in a session
   create_table "exercise_sessions", force: :cascade do |t|
     t.bigint "exercise_id", null: false
     t.bigint "workout_session_id", null: false
@@ -27,19 +26,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_19_181903) do
     t.index ["workout_session_id"], name: "index_exercise_sessions_on_workout_session_id"
   end
 
-  # For creating/modifying an exercise
   create_table "exercises", force: :cascade do |t|
     t.string "name"
-    t.integer "sets"
-    t.integer "reps"
-    t.float "weight"
     t.integer "duration"
     t.integer "personal_best"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  # The workouts that belong to a routine
   create_table "routine_workouts", force: :cascade do |t|
     t.bigint "routine_id", null: false
     t.bigint "workout_id", null: false
@@ -49,7 +43,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_19_181903) do
     t.index ["workout_id"], name: "index_routine_workouts_on_workout_id"
   end
 
-# For creating a new routine
   create_table "routines", force: :cascade do |t|
     t.string "name"
     t.integer "frequency"
@@ -59,7 +52,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_19_181903) do
     t.index ["user_id"], name: "index_routines_on_user_id"
   end
 
-  # All user information
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.integer "height"
@@ -77,17 +69,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_19_181903) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  # Each exercise belongs to a particular workout
   create_table "workout_exercises", force: :cascade do |t|
     t.bigint "workout_id", null: false
     t.bigint "exercise_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "sets"
+    t.integer "reps"
+    t.float "weight"
     t.index ["exercise_id"], name: "index_workout_exercises_on_exercise_id"
     t.index ["workout_id"], name: "index_workout_exercises_on_workout_id"
   end
 
-  # For recording performance of a particular workout
   create_table "workout_sessions", force: :cascade do |t|
     t.bigint "workout_id", null: false
     t.bigint "user_id", null: false
@@ -99,7 +92,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_19_181903) do
     t.index ["workout_id"], name: "index_workout_sessions_on_workout_id"
   end
 
-  # For creating/modifying a workout
   create_table "workouts", force: :cascade do |t|
     t.string "name"
     t.bigint "user_id", null: false
