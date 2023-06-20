@@ -84,9 +84,19 @@ end
 
   # /workouts/1/exercises/1
   def delete_exercise
-    @exercise = Exercise.find(params[:exercise_id])
-    @workout.exercises.delete(@exercise)
+    workout_exercise = WorkoutExercise.find_by(workout: @workout, exercise: params[:exercise_id])
+    if workout_exercise
+    workout_exercise.destroy
+    render json: {message: "Exercise removed from workout"}, status: :ok
+    else
+      render json: {error: "Exercise not found in this workout"}, status: :not_found
   end
+end
+ 
+  # def delete_exercise
+  #   @exercise = Exercise.find(params[:exercise_id])
+  #   @workout.exercises.delete(@exercise)
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
