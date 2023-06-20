@@ -1,5 +1,5 @@
 class WorkoutsController < ApplicationController
-  before_action :set_workout, only: %i[ show update destroy exercises add_exercise ]
+  before_action :set_workout, only: %i[ show update destroy exercises add_exercise delete_exercise ]
 
   # GET Requests
   # /workouts
@@ -41,6 +41,7 @@ end
     end
   end
 
+  # /workouts/1/exercises
 def add_exercise
   @exercise = Exercise.find(params[:exercise_id])
   @workout.exercises << @exercise
@@ -55,6 +56,12 @@ end
   # /workouts/1
   def destroy
     @workout.destroy
+  end
+
+  # /workouts/1/exercises/1
+  def delete_exercise
+    @exercise = Exercise.find(params[:exercise_id])
+    @workout.exercises.delete(@exercise)
   end
 
   private
