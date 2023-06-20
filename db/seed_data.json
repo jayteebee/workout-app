@@ -1,3 +1,1209 @@
 [
-    
+    {
+        "exerciseName": "Barbell Bench Press",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Chest",
+            "Triceps"
+        ],
+        "secondaryMuscles": [
+            "Shoulders",
+            "Lats"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Fly",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Chest"
+        ],
+        "secondaryMuscles": [
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Cable Crossover",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Chest"
+        ],
+        "secondaryMuscles": [
+            "Shoulders",
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Pushups",
+        "equipmentUsed": "Bodyweight",
+        "primaryMuscles": [
+            "Chest",
+            "Triceps"
+        ],
+        "secondaryMuscles": [
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Shoulder Press",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Shoulders"
+        ],
+        "secondaryMuscles": [
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Lateral Raise",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Shoulders"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Front Raise",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Shoulders"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Barbell Row",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Back"
+        ],
+        "secondaryMuscles": [
+            "Biceps"
+        ]
+    },
+    {
+        "exerciseName": "Pullups",
+        "equipmentUsed": "Bodyweight",
+        "primaryMuscles": [
+            "Back"
+        ],
+        "secondaryMuscles": [
+            "Biceps"
+        ]
+    },
+    {
+        "exerciseName": "Lat Pulldown",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Back"
+        ],
+        "secondaryMuscles": [
+            "Biceps"
+        ]
+    },
+    {
+        "exerciseName": "Deadlift",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Back",
+            "Legs",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Forearms",
+            "Traps"
+        ]
+    },
+    {
+        "exerciseName": "Squats",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Legs",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Lower Back",
+            "Abs"
+        ]
+    },
+    {
+        "exerciseName": "Leg Press",
+        "equipmentUsed": "Machine",
+        "primaryMuscles": [
+            "Legs",
+            "Glutes"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Calf Raise",
+        "equipmentUsed": "Machine",
+        "primaryMuscles": [
+            "Calves"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Situps",
+        "equipmentUsed": "Bodyweight",
+        "primaryMuscles": [
+            "Abs"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Plank",
+        "equipmentUsed": "Bodyweight",
+        "primaryMuscles": [
+            "Abs"
+        ],
+        "secondaryMuscles": [
+            "Lower Back"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Curl",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Biceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Dumbbell Curl",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Biceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Tricep Dips",
+        "equipmentUsed": "Bodyweight",
+        "primaryMuscles": [
+            "Triceps"
+        ],
+        "secondaryMuscles": [
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Tricep Pushdown",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Triceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Close-Grip Bench Press",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Triceps"
+        ],
+        "secondaryMuscles": [
+            "Chest",
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Skull Crushers",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Triceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Hammer Curls",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Biceps",
+            "Forearms"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Concentration Curls",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Biceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Preacher Curls",
+        "equipmentUsed": "Machine",
+        "primaryMuscles": [
+            "Biceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Bent-Over Rows",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Back"
+        ],
+        "secondaryMuscles": [
+            "Biceps",
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Seated Rows",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Back"
+        ],
+        "secondaryMuscles": [
+            "Biceps",
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Lunges",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Legs",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Abs",
+            "Lower Back"
+        ]
+    },
+    {
+        "exerciseName": "Bulgarian Split Squats",
+        "equipmentUsed": "Bodyweight",
+        "primaryMuscles": [
+            "Legs",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Abs",
+            "Lower Back"
+        ]
+    },
+    {
+        "exerciseName": "Lying Leg Curls",
+        "equipmentUsed": "Machine",
+        "primaryMuscles": [
+            "Hamstrings"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Leg Extensions",
+        "equipmentUsed": "Machine",
+        "primaryMuscles": [
+            "Quadriceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Russian Twists",
+        "equipmentUsed": "Bodyweight",
+        "primaryMuscles": [
+            "Abs",
+            "Obliques"
+        ],
+        "secondaryMuscles": [
+            "Lower Back"
+        ]
+    },
+    {
+        "exerciseName": "Bicycle Crunches",
+        "equipmentUsed": "Bodyweight",
+        "primaryMuscles": [
+            "Abs",
+            "Obliques"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Hanging Leg Raises",
+        "equipmentUsed": "Pull-up Bar",
+        "primaryMuscles": [
+            "Abs"
+        ],
+        "secondaryMuscles": [
+            "Forearms"
+        ]
+    },
+    {
+        "exerciseName": "Treadmill Running",
+        "equipmentUsed": "Treadmill",
+        "primaryMuscles": [
+            "Legs"
+        ],
+        "secondaryMuscles": [
+            "Cardiovascular System"
+        ]
+    },
+    {
+        "exerciseName": "Stationary Bike",
+        "equipmentUsed": "Stationary Bike",
+        "primaryMuscles": [
+            "Legs"
+        ],
+        "secondaryMuscles": [
+            "Cardiovascular System"
+        ]
+    },
+    {
+        "exerciseName": "Jump Rope",
+        "equipmentUsed": "Jump Rope",
+        "primaryMuscles": [
+            "Legs",
+            "Shoulders"
+        ],
+        "secondaryMuscles": [
+            "Cardiovascular System"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Overhead Press",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Shoulders"
+        ],
+        "secondaryMuscles": [
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Lateral Raise",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Shoulders"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Barbell Shrug",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Traps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Upright Rows",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Traps",
+            "Shoulders"
+        ],
+        "secondaryMuscles": [
+            "Biceps"
+        ]
+    },
+    {
+        "exerciseName": "Face Pulls",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Traps",
+            "Rear Delts"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Pendlay Rows",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Back"
+        ],
+        "secondaryMuscles": [
+            "Biceps",
+            "Traps"
+        ]
+    },
+    {
+        "exerciseName": "Good Mornings",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Lower Back",
+            "Hamstrings"
+        ],
+        "secondaryMuscles": [
+            "Glutes"
+        ]
+    },
+    {
+        "exerciseName": "Hyperextensions",
+        "equipmentUsed": "Bodyweight",
+        "primaryMuscles": [
+            "Lower Back"
+        ],
+        "secondaryMuscles": [
+            "Hamstrings",
+            "Glutes"
+        ]
+    },
+    {
+        "exerciseName": "Stiff-Legged Deadlifts",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Hamstrings",
+            "Lower Back"
+        ],
+        "secondaryMuscles": [
+            "Glutes"
+        ]
+    },
+    {
+        "exerciseName": "Zercher Squats",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Quadriceps",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Lower Back"
+        ]
+    },
+    {
+        "exerciseName": "Front Squats",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Quadriceps",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Lower Back",
+            "Abs"
+        ]
+    },
+    {
+        "exerciseName": "Goblet Squats",
+        "equipmentUsed": "Dumbbell",
+        "primaryMuscles": [
+            "Quadriceps",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Lower Back",
+            "Abs"
+        ]
+    },
+    {
+        "exerciseName": "T-Bar Rows",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Back"
+        ],
+        "secondaryMuscles": [
+            "Biceps",
+            "Traps"
+        ]
+    },
+    {
+        "exerciseName": "Single Arm Dumbbell Rows",
+        "equipmentUsed": "Dumbbell",
+        "primaryMuscles": [
+            "Back"
+        ],
+        "secondaryMuscles": [
+            "Biceps"
+        ]
+    },
+    {
+        "exerciseName": "Incline Bench Press",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Chest",
+            "Shoulders"
+        ],
+        "secondaryMuscles": [
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Decline Bench Press",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Chest"
+        ],
+        "secondaryMuscles": [
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Seated Leg Curl",
+        "equipmentUsed": "Machine",
+        "primaryMuscles": [
+            "Hamstrings"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Hack Squat",
+        "equipmentUsed": "Machine",
+        "primaryMuscles": [
+            "Quadriceps",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Calves"
+        ]
+    },
+    {
+        "exerciseName": "Leg Abduction",
+        "equipmentUsed": "Machine",
+        "primaryMuscles": [
+            "Hip Abductors"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Leg Adduction",
+        "equipmentUsed": "Machine",
+        "primaryMuscles": [
+            "Hip Adductors"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Standing Calf Raise",
+        "equipmentUsed": "Machine",
+        "primaryMuscles": [
+            "Calves"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Seated Calf Raise",
+        "equipmentUsed": "Machine",
+        "primaryMuscles": [
+            "Calves"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Lateral Pulldown",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Lats"
+        ],
+        "secondaryMuscles": [
+            "Biceps",
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Seated Cable Row",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Middle Back"
+        ],
+        "secondaryMuscles": [
+            "Biceps",
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Cable Crunch",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Abs"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Incline Dumbbell Press",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Chest"
+        ],
+        "secondaryMuscles": [
+            "Shoulders",
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Pullover",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Chest",
+            "Lats"
+        ],
+        "secondaryMuscles": [
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Row",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Back"
+        ],
+        "secondaryMuscles": [
+            "Biceps",
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Shrugs",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Traps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Barbell Front Raise",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Shoulders"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Dumbbell Front Raise",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Shoulders"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Cable Crossover",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Chest"
+        ],
+        "secondaryMuscles": [
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Cable Lateral Raise",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Shoulders"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Cable Tricep Extension",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Triceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Cable Bicep Curl",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Biceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Cable Seated Row",
+        "equipmentUsed": "Cable Machine",
+        "primaryMuscles": [
+            "Back"
+        ],
+        "secondaryMuscles": [
+            "Biceps",
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Deadlift",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Back",
+            "Legs",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Traps",
+            "Forearms"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Clean and Press",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Shoulders",
+            "Legs"
+        ],
+        "secondaryMuscles": [
+            "Triceps",
+            "Back",
+            "Abs"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Bulgarian Split Squat",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Quadriceps",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Hamstrings"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Step Up",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Quadriceps",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Hamstrings"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Flyes",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Chest"
+        ],
+        "secondaryMuscles": [
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Rear Lateral Raise",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Shoulders"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Seated Dumbbell Overhead Press",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Shoulders"
+        ],
+        "secondaryMuscles": [
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Hammer Curl",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Biceps"
+        ],
+        "secondaryMuscles": [
+            "Forearms"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Reverse Curl",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Biceps",
+            "Forearms"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Barbell Glute Bridge",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Hamstrings"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Walking Lunge",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Quadriceps",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Hamstrings",
+            "Calves"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Split Squat",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Quadriceps",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Hamstrings",
+            "Calves"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Reverse Lunge",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Quadriceps",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Hamstrings",
+            "Calves"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell RDL",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Hamstrings",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Lower Back"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Push Press",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Shoulders"
+        ],
+        "secondaryMuscles": [
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Drag Curl",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Biceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Dumbbell Concentration Curl",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Biceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Dumbbell Skull Crushers",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Triceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Barbell Overhead Tricep Extension",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Triceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Barbell Bent Over Row",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Back"
+        ],
+        "secondaryMuscles": [
+            "Biceps"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Decline Bench Press",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Chest"
+        ],
+        "secondaryMuscles": [
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Floor Press",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Chest"
+        ],
+        "secondaryMuscles": [
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Arnold Press",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Shoulders"
+        ],
+        "secondaryMuscles": [
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Lateral Lunge",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Quadriceps",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Hamstrings",
+            "Adductors"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Hack Squat",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Quadriceps",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Hamstrings"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Renegade Row",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Back",
+            "Abs"
+        ],
+        "secondaryMuscles": [
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Shrug Behind The Back",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Traps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Dumbbell Farmer's Walk",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Forearms",
+            "Traps",
+            "Calves"
+        ],
+        "secondaryMuscles": [
+            "Quadriceps",
+            "Hamstrings"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Good Morning",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Lower Back",
+            "Hamstrings"
+        ],
+        "secondaryMuscles": [
+            "Glutes"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Tricep Kickback",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Triceps"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Barbell Close Grip Bench Press",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Triceps"
+        ],
+        "secondaryMuscles": [
+            "Chest",
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Cross Body Hammer Curl",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Biceps"
+        ],
+        "secondaryMuscles": [
+            "Forearms"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Zottman Curl",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Biceps",
+            "Forearms"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Dumbbell Incline Bench Press",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Chest"
+        ],
+        "secondaryMuscles": [
+            "Shoulders",
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Close Grip Floor Press",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Chest"
+        ],
+        "secondaryMuscles": [
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Rack Pull",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Back",
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Hamstrings",
+            "Forearms"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Pullover on Bench",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Chest",
+            "Lats"
+        ],
+        "secondaryMuscles": [
+            "Triceps"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Wrist Curl",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Forearms"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Barbell Wrist Curl",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Forearms"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Barbell Front Squat",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Quadriceps"
+        ],
+        "secondaryMuscles": [
+            "Glutes",
+            "Calves"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Seated Calf Raise",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Calves"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Dumbbell Incline Row",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Back"
+        ],
+        "secondaryMuscles": [
+            "Biceps",
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Upright Row",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Shoulders",
+            "Traps"
+        ],
+        "secondaryMuscles": [
+            "Biceps"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Lateral Raise",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Shoulders"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Barbell Calf Raise",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Calves"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Dumbbell Russian Twist",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Abs",
+            "Obliques"
+        ],
+        "secondaryMuscles": []
+    },
+    {
+        "exerciseName": "Barbell Glute Bridge",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Glutes"
+        ],
+        "secondaryMuscles": [
+            "Hamstrings"
+        ]
+    },
+    {
+        "exerciseName": "Dumbbell Bench Press",
+        "equipmentUsed": "Dumbbells",
+        "primaryMuscles": [
+            "Chest"
+        ],
+        "secondaryMuscles": [
+            "Triceps",
+            "Shoulders"
+        ]
+    },
+    {
+        "exerciseName": "Barbell Underhand Bent Over Row",
+        "equipmentUsed": "Barbell",
+        "primaryMuscles": [
+            "Back"
+        ],
+        "secondaryMuscles": [
+            "Biceps",
+            "Shoulders"
+        ]
+    }
 ]
