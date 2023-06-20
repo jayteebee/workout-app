@@ -1,5 +1,5 @@
 class RoutinesController < ApplicationController
-  before_action :set_routine, only: %i[ show update destroy workouts add_workout ]
+  before_action :set_routine, only: %i[ show update destroy workouts add_workout delete_workout ]
 
   # GET /routines
   def index
@@ -56,13 +56,13 @@ end
 
 def delete_workout
   @workout = Workout.find(params[:workout_id])
-  @workout.destroy
+  @routine.workouts.delete(@workout)
 end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_routine
-      @routine = Routine.find(params[:id])
+      @routine = Routine.find(params[:routine_id])
     end
 
     # Only allow a list of trusted parameters through.
