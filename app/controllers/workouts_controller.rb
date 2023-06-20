@@ -1,5 +1,6 @@
 class WorkoutsController < ApplicationController
-  before_action :set_workout, only: %i[ show update destroy exercises add_exercise delete_exercise update_exercise ]
+  before_action :set_workout_for_show_update_destroy, only: %i[ show update destroy ]
+  before_action :set_workout_for_nested_resources, only: %i[ exercises add_exercise delete_exercise update_exercise ]
 
   # GET Requests
   # /workouts
@@ -100,7 +101,11 @@ end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_workout
+    def set_workout_for_show_update_destroy
+      @workout = Workout.find(params[:id])
+    end
+    
+    def set_workout_for_nested_resources
       @workout = Workout.find(params[:workout_id])
     end
 
