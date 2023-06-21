@@ -17,8 +17,8 @@ class RoutinesController < ApplicationController
 
 # /routines/1/workouts
 def workouts
-  routine_workouts = @routine.routine_workouts.includes(:workout)
-  render json: routine_workouts, include: :workout
+  @routine_workouts = @routine.routine_workouts.includes(:workout)
+  render json: @routine_workouts.as_json(include: {routine: {only: :name}, workout: {}})
 end
 # def workouts
 #   render json: @routine.workouts
