@@ -75,7 +75,13 @@ end
 
 def delete_workout
   @workout = Workout.find(params[:workout_id])
-  @routine.workouts.delete(@workout)
+  routine_workout = RoutineWorkout.find_by(routine: @routine, workout: @workout)
+  if routine_workout
+  routine_workout.destroy
+  render json: {message: "Workout deleted from routine"}
+  else
+    render json: {error: "Workout not found"}, status: :not_found
+  end
 end
 
   private
