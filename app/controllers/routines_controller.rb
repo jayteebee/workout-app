@@ -49,13 +49,23 @@ end
   # /routines/1/workouts
 def add_workout
   @workout = Workout.find(params[:workout_id])
-  @routine.workouts << @workout
+  @routine.routine_workouts.create(workout: @workout)
   if @routine.save
     render json: @routine
   else 
-    render json: @root.errors, status: :unprocessable_entity
+    render json: @routine.errors, status: :unprocessable_entity
   end
 end
+
+# def add_workout
+#   @workout = Workout.find(params[:workout_id])
+#   @routine.workouts << @workout
+#   if @routine.save
+#     render json: @routine
+#   else 
+#     render json: @root.errors, status: :unprocessable_entity
+#   end
+# end
 
   # DELETE REQUESTS
   # /routines/1
