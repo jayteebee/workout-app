@@ -15,6 +15,9 @@ gem "puma", "~> 5.0"
 # sidekiq
 gem "sidekiq"
 
+# sidekiq-cron
+gem "sidekiq-cron"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
