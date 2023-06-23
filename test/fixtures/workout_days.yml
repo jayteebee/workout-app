@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  days_of_week: 1
+  array: MyString
+  true,: MyString
+  user: one
+
+two:
+  days_of_week: 1
+  array: MyString
+  true,: MyString
+  user: two
