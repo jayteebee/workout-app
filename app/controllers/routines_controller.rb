@@ -49,7 +49,7 @@ end
   # /routines/1/workouts
 def add_workout
   @workout = Workout.find(params[:workout_id])
-  @routine.routine_workouts.create(workout: @workout)
+  @routine.routine_workouts.create(workout: @workout, order: params[:order])
   if @routine.save
     render json: @routine
   else 
