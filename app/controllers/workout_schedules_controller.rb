@@ -15,6 +15,17 @@ class WorkoutSchedulesController < ApplicationController
       render json: @workout_schedule
     end
   
+    # fetch all workoutschedule entries for a user within the date range
+def user_schedules
+  start_date = params[:start_date].to_date
+end_date = params[:end_date].to_date
+user = User.find(params[:id])
+@workout_schedules = user.workout_schedules.where(date: start_date..end_date)
+
+render json: @workout_schedules, status: :ok
+end
+
+
     # POST REQUESTS
     #  /workout_schedules
     def create
