@@ -42,7 +42,7 @@ end
     #  /workout_schedules/1
     def update
       if @workout_schedule.update(workout_schedule_params)
-        render json: @workout_schedule
+        render json: @workout_schedule, status: :ok
       else
         render json: @workout_schedule.errors, status: :unprocessable_entity
       end
