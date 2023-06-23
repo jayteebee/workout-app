@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_20_200653) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_23_105852) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,6 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_20_200653) do
     t.bigint "workout_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "order"
     t.index ["routine_id"], name: "index_routine_workouts_on_routine_id"
     t.index ["workout_id"], name: "index_routine_workouts_on_workout_id"
   end
@@ -72,6 +73,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_20_200653) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "workout_days", force: :cascade do |t|
+    t.integer "days_of_week", default: [], array: true
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_workout_days_on_user_id"
+  end
+
   create_table "workout_exercises", force: :cascade do |t|
     t.bigint "workout_id", null: false
     t.bigint "exercise_id", null: false
@@ -82,6 +91,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_20_200653) do
     t.float "weight"
     t.index ["exercise_id"], name: "index_workout_exercises_on_exercise_id"
     t.index ["workout_id"], name: "index_workout_exercises_on_workout_id"
+  end
+
+  create_table "workout_schedules", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "routine_workout_id", null: false
+    t.datetime "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["routine_workout_id"], name: "index_workout_schedules_on_routine_workout_id"
+    t.index ["user_id"], name: "index_workout_schedules_on_user_id"
   end
 
   create_table "workout_sessions", force: :cascade do |t|
@@ -108,8 +127,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_20_200653) do
   add_foreign_key "routine_workouts", "routines"
   add_foreign_key "routine_workouts", "workouts"
   add_foreign_key "routines", "users"
+  add_foreign_key "workout_days", "users"
   add_foreign_key "workout_exercises", "exercises"
   add_foreign_key "workout_exercises", "workouts"
+  add_foreign_key "workout_schedules", "routine_workouts"
+  add_foreign_key "workout_schedules", "users"
   add_foreign_key "workout_sessions", "users"
   add_foreign_key "workout_sessions", "workouts"
   add_foreign_key "workouts", "users"
