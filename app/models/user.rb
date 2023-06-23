@@ -7,4 +7,6 @@ class User < ApplicationRecord
 
     has_many :routines
     has_many :workouts
+    has_many :workout_days
+    has_many :workout_schedules
 end
