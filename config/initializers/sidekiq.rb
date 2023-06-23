@@ -3,6 +3,6 @@ require "sidekiq-cron"
 
 Sidekiq::Cron::Job.create(
     name: "WorkoutSchedule regeneration - every day",
-    cron: "0 0 * * *",
+    cron: "*/5 * * * *",
     class: "WorkoutScheduleRegenerationJob"
 )
