@@ -2,19 +2,22 @@ class WorkoutDaysController < ApplicationController
 
     before_action :set_workout_day, only: [:show, :update, :destroy]
 
-    # GET /workout_days
+    # GET REQUESTS
+    
+    #  /workout_days
     def index
       @workout_days = WorkoutDay.all
   
       render json: @workout_days
     end
   
-    # GET /workout_days/1
+    # /workout_days/1
     def show
       render json: @workout_day
     end
   
-    # POST /workout_days
+    # POST REQUESTS
+    # /workout_days
     def create
       @workout_day = WorkoutDay.new(workout_day_params)
   
@@ -47,7 +50,7 @@ class WorkoutDaysController < ApplicationController
   
       # Only allow a trusted parameter "white list" through.
       def workout_day_params
-        params.require(:workout_day).permit(:days_of_week, :user_id)
+        params.require(:workout_day).permit(:days_of_week: [], :user_id)
       end
 
 end
