@@ -2,19 +2,21 @@ class WorkoutSchedulesController < ApplicationController
 
     before_action :set_workout_schedule, only: [:show, :update, :destroy]
 
-    # GET /workout_schedules
+    # GET REQUESTS
+    #  /workout_schedules
     def index
       @workout_schedules = WorkoutSchedule.all
   
       render json: @workout_schedules
     end
   
-    # GET /workout_schedules/1
+    # /workout_schedules/1
     def show
       render json: @workout_schedule
     end
   
-    # POST /workout_schedules
+    # POST REQUESTS
+    #  /workout_schedules
     def create
       @workout_schedule = WorkoutSchedule.new(workout_schedule_params)
   
@@ -25,7 +27,8 @@ class WorkoutSchedulesController < ApplicationController
       end
     end
   
-    # PATCH/PUT /workout_schedules/1
+    # PATCH/PUT REQUESTS
+    #  /workout_schedules/1
     def update
       if @workout_schedule.update(workout_schedule_params)
         render json: @workout_schedule
@@ -34,7 +37,8 @@ class WorkoutSchedulesController < ApplicationController
       end
     end
   
-    # DELETE /workout_schedules/1
+    # DELETE REQUESTS
+    #  /workout_schedules/1
     def destroy
       @workout_schedule.destroy
     end
