@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_23_105852) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_23_145746) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -99,6 +99,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_105852) do
     t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "completed", default: false
     t.index ["routine_workout_id"], name: "index_workout_schedules_on_routine_workout_id"
     t.index ["user_id"], name: "index_workout_schedules_on_user_id"
   end
