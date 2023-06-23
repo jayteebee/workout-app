@@ -28,7 +28,8 @@ class WorkoutDaysController < ApplicationController
       end
     end
   
-    # PATCH/PUT /workout_days/1
+    # PATCH/PUT REQUESTS
+    #  /workout_days/1
     def update
       if @workout_day.update(workout_day_params)
         render json: @workout_day
@@ -37,7 +38,8 @@ class WorkoutDaysController < ApplicationController
       end
     end
   
-    # DELETE /workout_days/1
+    # DELETE REQUESTS
+    # /workout_days/1
     def destroy
       @workout_day.destroy
     end
