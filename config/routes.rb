@@ -25,6 +25,8 @@ put '/routines/:routine_id/workouts', to: 'routines#add_workout'
 delete '/routines/:routine_id/workouts/:workout_id', to: 'routines#delete_workout'
 
   resources :users
+  resources :workout_days
+  resources :workout_schedules
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
