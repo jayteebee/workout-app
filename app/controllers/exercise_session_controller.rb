@@ -9,49 +9,49 @@ class ExerciseSessionController < ApplicationController
         render json: @exercise_sessions
     end
 
-    # /workout_session/1
+    # /exercise_session/1
     def show
-        render json: @workout_session
+        render json: @exercise_session
     end
 
     # POST REQUESTS
-    # /workout_session
+    # /exercise_session
     def create
-        @workout_session = WorkoutSession.new(workout_session_params)
+        @exercise_session = ExerciseSession.new(exercise_session_params)
 
-        if @workout_session.save
-            render json: @workout_session, status: :created
+        if @exercise_session.save
+            render json: @exercise_session, status: :created
           else
-            render json: @workout_session.errors, status: :unprocessable_entity
+            render json: @exercise_session.errors, status: :unprocessable_entity
           end
     end
 
 
     # PATCH/PUT REQUESTS
-    # /workout_session/1
+    # /exercise_session/1
     def update
-        if @workout_session.update(workout_session_params)
-            render json: @workout_session, status: :ok
+        if @exercise_session.update(exercise_session_params)
+            render json: @exercise_session, status: :ok
           else
-            render json: @workout_session.errors, status: :unprocessable_entity
+            render json: @exercise_session.errors, status: :unprocessable_entity
           end
     end
 
 # DELETE REQUESTS   
-# /workout_session/1
+# /exercise_session/1
     def destroy
-        @workout_session.destroy
+        @exercise_session.destroy
     end
 
     
     private
 
-    def set_workout_session
-        @workout_session = WorkoutSession.find(params[:id])
+    def set_exercise_session
+        @exercise_session = ExerciseSession.find(params[:id])
     end
 
-    def workout_session_params
-        params.require(:workout_session).permit(:user_id, :workout_id, :date, :total_duration)
+    def exercise_session_params
+        params.require(:exercise_session).permit(:workout_session_id, :exercise_id, :sets_completed, :reps_completed, :weight_used)
       end
 
 end
