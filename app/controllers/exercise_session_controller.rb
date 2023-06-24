@@ -17,7 +17,9 @@ class ExerciseSessionController < ApplicationController
     # POST REQUESTS
     # /exercise_session
     def create
+        workout_session = WorkoutSession.find(params[:workout_session_id])
         @exercise_session = ExerciseSession.new(exercise_session_params)
+        workout_session.exercise_sessions << @exercise_session
 
         if @exercise_session.save
             render json: @exercise_session, status: :created
