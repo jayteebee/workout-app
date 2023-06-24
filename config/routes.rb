@@ -34,6 +34,7 @@ get "user/:id/workout_schedules", to: "workout_schedules#user_schedules"
 
 
 resources :workout_session
+resources :exercise_session
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
