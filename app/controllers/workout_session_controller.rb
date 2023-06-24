@@ -17,7 +17,13 @@ class WorkoutSessionController < ApplicationController
     # POST REQUESTS
     # /workout_session
     def create
+        @workout_session = WorkoutSession.new(workout_session_params)
 
+        if @workout_session.save
+            render json: @workout_session, status: :created
+          else
+            render json: @workout_session.errors, status: :unprocessable_entity
+          end
     end
 
 
