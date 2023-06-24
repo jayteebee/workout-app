@@ -28,6 +28,11 @@ class WorkoutSessionController < ApplicationController
     end
 
     
-    
+    private
+
+    def set_workout_session
+        @workout_session = WorkoutSession.find(params[:id])
+    end
+
 
 end
