@@ -1,6 +1,6 @@
 class WorkoutSessionController < ApplicationController
 
-    before_action :set_workout_session, only: [:show ]
+    before_action :set_workout_session, only: [:show, :update, :destroy ]
 
     # GET REQUESTS
     # /workout_session
@@ -37,9 +37,10 @@ class WorkoutSessionController < ApplicationController
           end
     end
 
-
+# DELETE REQUESTS   
+# /workout_session/1
     def destroy
-
+        @workout_session.destroy
     end
 
     
