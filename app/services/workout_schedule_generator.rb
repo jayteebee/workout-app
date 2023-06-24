@@ -37,3 +37,4 @@ def next_occurrence(wday)
     date    
 end
 end
+
