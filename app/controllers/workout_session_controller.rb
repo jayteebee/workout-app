@@ -27,8 +27,14 @@ class WorkoutSessionController < ApplicationController
     end
 
 
+    # PATCH/PUT REQUESTS
+    # /workout_session/1
     def update
-
+        if @workout_session.update(workout_session_params)
+            render json: @workout_session, status: :ok
+          else
+            render json: @workout_session.errors, status: :unprocessable_entity
+          end
     end
 
 
