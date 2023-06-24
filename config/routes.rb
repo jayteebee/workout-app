@@ -32,6 +32,9 @@ delete '/routines/:routine_id/workouts/:workout_id', to: 'routines#delete_workou
   resources :workout_schedules
 get "user/:id/workout_schedules", to: "workout_schedules#user_schedules"
 
+
+resources :workout_sessions
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
