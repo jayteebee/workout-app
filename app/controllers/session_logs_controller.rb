@@ -1,4 +1,6 @@
 class SessionLogsController < ApplicationController
+before_action :set_session_log
+
   def index
   end
 
@@ -12,5 +14,11 @@ class SessionLogsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private 
+
+  def set_session_log
+    @session_log = SessionLog.find(params[:id])
   end
 end
