@@ -18,7 +18,13 @@ class WorkoutsController < ApplicationController
   # /workouts/1/exercises
 def exercises
   workout_exercises = @workout.workout_exercises.includes(:exercise)
-render json: workout_exercises, include: :exercise
+  workout_exercises_as_json = workout_exercises.as_json(include: :exercise)
+
+  workout_exercises_as_json.each do |workout_exercise|
+    workout_exercise["workout_name"] = @workout.name
+  end
+
+  render json: workout_exercises_as_json
 end
 
   # POST REQUESTS

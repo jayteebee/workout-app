@@ -1,7 +1,7 @@
 class WorkoutSession < ApplicationRecord
   belongs_to :workout
   belongs_to :user
-  has_many :exercise_sessions
+  has_many :exercise_sessions, dependent: :destroy
 
 
   def as_json(options={})
