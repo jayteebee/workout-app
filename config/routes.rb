@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'session_logs/index'
+  get 'session_logs/show'
+  get 'session_logs/create'
+  get 'session_logs/update'
+  get 'session_logs/destroy'
   get '/current_user', to: 'current_user#index'
 
   devise_for :users, path: '', path_names: {
