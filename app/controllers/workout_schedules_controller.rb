@@ -42,15 +42,6 @@ end
     #  /workout_schedules/1
     def update
       if @workout_schedule.update(workout_schedule_params)
-if @workout_schedule.completed
-  workout_session = WorkoutSession.find_by(workout_id: @workout_schedule.routine_workout_id, user_id: @workout_schedule.user_id)
-  if workout_session
-  SessionLog.create!(
-    user_id: @workout_schedule.user_id,
-    details: workout_session.as_json
-  )
-end
-end
         render json: @workout_schedule, status: :ok
       else
         render json: @workout_schedule.errors, status: :unprocessable_entity
