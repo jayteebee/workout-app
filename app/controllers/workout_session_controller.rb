@@ -31,6 +31,14 @@ class WorkoutSessionController < ApplicationController
     # /workout_session/1
     def update
         if @workout_session.update(workout_session_params)
+            if @workout_session.total_duration
+                SessionLog.create!(
+                  user_id: @workout_session.user_id,
+                  details: @workout_session.as_json
+                )
+              end
+            
+
             render json: @workout_session, status: :ok
           else
             render json: @workout_session.errors, status: :unprocessable_entity

@@ -43,10 +43,13 @@ end
     def update
       if @workout_schedule.update(workout_schedule_params)
 if @workout_schedule.completed
+  workout_session = WorkoutSession.find_by(workout_id: @workout_schedule.routine_workout_id, user_id: @workout_schedule.user_id)
+  if workout_session
   SessionLog.create!(
     user_id: @workout_schedule.user_id,
-    details: @workout_schedule.as_json(include: {exercise_sessions: {}})
+    details: workout_session.as_json
   )
+end
 end
         render json: @workout_schedule, status: :ok
       else

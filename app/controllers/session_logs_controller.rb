@@ -1,8 +1,12 @@
 class SessionLogsController < ApplicationController
-before_action :set_session_log
+before_action :set_session_log, only: [:show, :update, :destroy ]
 
+# GET REQUEST
+# /session_logs
   def index
     @session_log = SessionLog.all
+    
+    render json: @session_log
   end
 
   def show
