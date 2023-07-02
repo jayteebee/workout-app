@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_23_145746) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_02_122222) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,6 +54,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_145746) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_routines_on_user_id"
+  end
+
+  create_table "session_logs", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.jsonb "details"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_session_logs_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -128,6 +136,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_145746) do
   add_foreign_key "routine_workouts", "routines"
   add_foreign_key "routine_workouts", "workouts"
   add_foreign_key "routines", "users"
+  add_foreign_key "session_logs", "users"
   add_foreign_key "workout_days", "users"
   add_foreign_key "workout_exercises", "exercises"
   add_foreign_key "workout_exercises", "workouts"
