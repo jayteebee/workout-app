@@ -1,40 +1,41 @@
+
+
 class WorkoutScheduleGenerator
-WEEKS_AHEAD = 4
+  WEEKS_AHEAD = 4
 
-def initialize(user)
+  def initialize(user)
     @user = user
-end
+  end
 
-def generate
-    # Iterating over each routine belonging to the user
+  def generate
+    last_schedule_date = WorkoutSchedule.where(user: @user).maximum(:date) || Date.current
+
+    start_date = [last_schedule_date, Date.current].max + 1.day
+    end_date = start_date + WEEKS_AHEAD.weeks - 1.day
+
     @user.routines.each do |routine|
-        # For each routine, iterate over each routine_workout
-        routine.routine_workouts.each do |routine_workout|
-            # iterate over each workout_day of the user
-            @user.workout_days.each do |workout_day|
-                # for each day of the week specified in the workout_day..
-                workout_day.days_of_week.each do |day|
-                    # calculate next occurrence of that weekday
-                    date = next_occurrence(day)
-                    # if that date is within our weeks_ahead range
-                    if date <= WEEKS_AHEAD.weeks.from_now
-                        # find/create a workout_schedule for the user, the routine_workout and the date.
-                        WorkoutSchedule.find_or_create_by(
-                            user: @user,
-                            routine_workout: routine_workout,
-                            date: date
-                        )
-                    end
-                end
-            end
-        end
+      workout_day_index = 0
+
+      # Generate a flat array of workout_days, so we can iterate over them
+      # Adjust the day indices to match Ruby's Date#wday
+      workout_days = @user.workout_days.flat_map { |workout_day| (workout_day.days_of_week.map { |day| (day+1)%7 }) }.sort
+
+      (start_date..end_date).each do |date|
+        # If the date is not a workout day, skip to the next date
+        next unless workout_days.include?(date.wday)
+
+        routine_workout = routine.routine_workouts.order(:order)[workout_day_index % routine.routine_workouts.count]
+
+        # Create workout schedules
+        WorkoutSchedule.find_or_create_by(
+          user: @user,
+          routine_workout: routine_workout,
+          date: date
+        )
+
+        # Increment the workout_day_index to point to next workout_day
+        workout_day_index += 1
+      end
     end
+  end
 end
-
-def next_occurrence(wday)
-    date = Date.current
-    date += 1.day until date.wday == wday
-    date    
-end
-end
-
