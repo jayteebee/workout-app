@@ -2,6 +2,7 @@ class SessionLogsController < ApplicationController
 before_action :set_session_log
 
   def index
+    @session_log = SessionLog.all
   end
 
   def show
