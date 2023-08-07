@@ -1057,7 +1057,7 @@
     },
     {
         "name": "Dumbbell Overhead Tricep Extension",
-        "equipment_used": "Barbell",
+        "equipment_used": "Dumbbells",
         "primary_muscles": [
             "Triceps"
         ],
