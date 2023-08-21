@@ -1,5 +1,6 @@
 class WorkoutDay < ApplicationRecord
   belongs_to :user
+  belongs_to :routine
 
 after_destroy :remove_future_workout_schedules
 
