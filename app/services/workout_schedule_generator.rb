@@ -18,6 +18,7 @@ class WorkoutScheduleGenerator
 
       # Generate a flat array of workout_days, so we can iterate over them
       # Adjust the day indices to match Ruby's Date#wday
+      # This is the part where workout days are mapped from days or week user input to monday to sunday
       workout_days = @user.workout_days.flat_map { |workout_day| (workout_day.days_of_week.map { |day| (day+1)%7 }) }.sort
 
       (start_date..end_date).each do |date|
