@@ -7,13 +7,17 @@ class WorkoutScheduleGenerator
     @user = user
   end
 
-  def generate
-    last_schedule_date = WorkoutSchedule.where(user: @user).maximum(:date) || Date.current
+  def generate_schedules(routine_id)
+
+    routine = @user.routines.find_by(id: routine_id)
+    return unless routine
+
+    last_schedule_date = routine.workout_schedules.maximum(:date) || Date.current
 
     start_date = [last_schedule_date, Date.current].max + 1.day
     end_date = start_date + WEEKS_AHEAD.weeks - 1.day
 
-    @user.routines.each do |routine|
+   
       workout_day_index = 0
 
       # Generate a flat array of workout_days, so we can iterate over them
@@ -36,7 +40,6 @@ class WorkoutScheduleGenerator
 
         # Increment the workout_day_index to point to next workout_day
         workout_day_index += 1
-      end
     end
   end
 end
