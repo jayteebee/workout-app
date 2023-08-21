@@ -7,4 +7,3 @@ def perform(user_id, routine_id)
         WorkoutScheduleGenerator.new(user).generate_schedules(routine_id)
     end
 end
-end

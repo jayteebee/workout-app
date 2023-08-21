@@ -53,7 +53,7 @@ class WorkoutDaysController < ApplicationController
   
       # Only allow a trusted parameter "white list" through.
       def workout_day_params
-        params.require(:workout_day).permit(:user_id, days_of_week: [] )
+        params.require(:workout_day).permit(:user_id, :routine_id, days_of_week: [] )
       end
 
 end
