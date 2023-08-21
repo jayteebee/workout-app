@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_02_122222) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_21_171926) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -86,6 +86,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_02_122222) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "routine_id", default: 1, null: false
+    t.index ["routine_id"], name: "index_workout_days_on_routine_id"
     t.index ["user_id"], name: "index_workout_days_on_user_id"
   end
 
@@ -137,6 +139,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_02_122222) do
   add_foreign_key "routine_workouts", "workouts"
   add_foreign_key "routines", "users"
   add_foreign_key "session_logs", "users"
+  add_foreign_key "workout_days", "routines"
   add_foreign_key "workout_days", "users"
   add_foreign_key "workout_exercises", "exercises"
   add_foreign_key "workout_exercises", "workouts"
