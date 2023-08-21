@@ -22,7 +22,7 @@ class WorkoutDaysController < ApplicationController
       @workout_day = WorkoutDay.new(workout_day_params)
   
       if @workout_day.save
-        WorkoutScheduleRegenerationJob.perform_async
+        WorkoutScheduleRegenerationJob.perform_async(@workout_day.user_id, @workout_day.routine_id)
         render json: @workout_day, status: :created
       else
         render json: @workout_day.errors, status: :unprocessable_entity
