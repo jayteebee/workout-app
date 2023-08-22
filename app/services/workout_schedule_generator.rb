@@ -10,10 +10,11 @@ class WorkoutScheduleGenerator
   def generate_schedules(routine_id)
 
     routine = @user.routines.find_by(id: routine_id)
+    puts "***** LAST SCHEDULE DATE ***** #{routine}"
+
     return unless routine
 
-    last_schedule_date = routine.workout_schedules.maximum(:date) || Date.current
-
+    last_schedule_date = routine.routine_workouts.flat_map(&:workout_schedules).maximum(:date) || Date.current
     start_date = [last_schedule_date, Date.current].max + 1.day
     end_date = start_date + WEEKS_AHEAD.weeks - 1.day
 
