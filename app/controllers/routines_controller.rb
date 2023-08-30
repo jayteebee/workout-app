@@ -71,6 +71,7 @@ end
   # /routines/1
   def destroy
     @routine.destroy
+    render json: { message: 'Routine deleted successfully' }
   end
 
 def delete_workout
