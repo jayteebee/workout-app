@@ -5,9 +5,22 @@ class WorkoutSchedulesController < ApplicationController
     # GET REQUESTS
     #  /workout_schedules
     def index
-      @workout_schedules = WorkoutSchedule.all
+      @workout_schedules = WorkoutSchedule.includes(routine_workout: :workout).all
   
-      render json: @workout_schedules
+      response_data = @workout_schedules.map do |schedule|
+        {
+          id: schedule.id,
+          user_id: schedule.user_id,
+          routine_workout_id: schedule.routine_workout_id,
+          date: schedule.date,
+          workout_name: schedule.routine_workout.workout.name, 
+          created_at: schedule.created_at,
+          updated_at: schedule.updated_at,
+          completed: schedule.completed
+        }
+      end
+  
+      render json: response_data
     end
   
     # /workout_schedules/1
