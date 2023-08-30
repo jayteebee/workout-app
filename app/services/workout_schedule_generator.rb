@@ -1,7 +1,7 @@
 
 
 class WorkoutScheduleGenerator
-  WEEKS_AHEAD = 4
+  WEEKS_AHEAD = 12
 
   def initialize(user)
     @user = user
