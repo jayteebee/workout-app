@@ -2,7 +2,8 @@ class Routine < ApplicationRecord
   belongs_to :user
   has_many :routine_workouts, dependent: :destroy
   has_many :workouts, through: :routine_workouts
-  has_many :workout_schedules
+  has_many :workout_schedules,  through: :routine_workouts
+  has_many :workout_days, dependent: :destroy
 
 after_destroy :remove_future_workout_schedules
 
