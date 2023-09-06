@@ -6,3 +6,4 @@ Sidekiq::Cron::Job.create(
     cron: "*/5 * * * *",
     class: "WorkoutScheduleRegenerationJob"
 )
+
