@@ -18,6 +18,8 @@ gem "sidekiq"
 # sidekiq-cron
 gem "sidekiq-cron"
 
+# montrose
+gem "montrose"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 

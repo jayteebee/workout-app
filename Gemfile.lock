@@ -123,6 +123,8 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.18.1)
+    montrose (0.15.0)
+      activesupport (>= 5.2, < 7.1)
     msgpack (1.7.1)
     net-imap (0.3.6)
       date
@@ -217,6 +219,7 @@ DEPENDENCIES
   devise
   devise-jwt
   jsonapi-serializer
+  montrose
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
