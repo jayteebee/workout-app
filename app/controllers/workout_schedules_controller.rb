@@ -50,7 +50,9 @@ end
         render json: @workout_schedule.errors, status: :unprocessable_entity
       end
     end
-  
+
+
+
     # PATCH/PUT REQUESTS
     #  /workout_schedules/1
     def update
