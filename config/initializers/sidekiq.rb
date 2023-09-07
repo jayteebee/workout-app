@@ -7,3 +7,8 @@ Sidekiq::Cron::Job.create(
     class: "WorkoutScheduleRegenerationJob"
 )
 
+Sidekiq::Cron::Job.create(
+    name: "WorkoutSchedule Frequency regeneration - every day",
+    cron: "*/5 * * * *", 
+    class: "WorkoutScheduleFrequencyRegenerationJob" 
+)
