@@ -31,7 +31,7 @@ delete '/routines/:routine_id/workouts/:workout_id', to: 'routines#delete_workou
 
   resources :users
   resources :workout_days
-
+post '/workout_days_frequency', to: 'workout_days#frequency'
 
 
   resources :workout_schedules

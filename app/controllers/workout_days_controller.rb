@@ -27,6 +27,20 @@ class WorkoutDaysController < ApplicationController
         render json: @workout_day.errors, status: :unprocessable_entity
       end
     end
+
+    # /workout_days_frequency
+    def frequency
+      @workout_day = WorkoutDay.new(workout_day_params)
+
+      if @workout_day.save
+        # change to new one
+        WorkoutScheduleFrequencyRegenerationJob.perform_async(@workout_day.user_id, @workout_day.routine_id)
+        render json: @workout_day, status: :created
+      else
+        @workout_day.errors.add(:base, "Error")
+        render json: @workout_day.errors, status: :unprocessable_entity
+      end
+    end
   
     # PATCH/PUT REQUESTS
     #  /workout_days/1
@@ -52,7 +66,7 @@ class WorkoutDaysController < ApplicationController
   
       # Only allow a trusted parameter "white list" through.
       def workout_day_params
-        params.require(:workout_day).permit(:user_id, :routine_id, days_of_week: [] )
+        params.require(:workout_day).permit(:user_id, :routine_id, :frequency, days_of_week: []  )
       end
 
 end
