@@ -84,6 +84,6 @@ production:
   <<: *default
   database: workout_app_production
   username: workout_app
-  password: <%= ENV["WORKOUT_APP_DATABASE_PASSWORD"] %>
+  password: jbjbjb3 #<%= ENV["WORKOUT_APP_DATABASE_PASSWORD"] %>
   host: dpg-ck2qthb6fquc73egs5a0-a
   port: 5432
