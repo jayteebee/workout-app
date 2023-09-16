@@ -4,7 +4,6 @@ class WorkoutScheduleFrequencyGenerator
   WEEKS_AHEAD = 12
 
   def initialize(user)
-    puts "user : #{user}"
     @user = user
     puts "USER: #{@user}"
   end
@@ -21,7 +20,7 @@ class WorkoutScheduleFrequencyGenerator
     end_date = start_date + WEEKS_AHEAD.weeks - 1.day
 
 
-    frequency = @user.workout_days.frequency
+    frequency = @user.workout_days.first&.frequency
     puts "frequency : #{frequency}"
 
     routine_workouts = routine.routine_workouts.order(:order).to_a
@@ -30,7 +29,9 @@ class WorkoutScheduleFrequencyGenerator
     sorted_routine_workouts = routine_workouts.sort_by { |workout| workout.order }
     puts "sorted_routine_workouts : #{sorted_routine_workouts}"
 
-    recurrence = Montrose.daily(interval: frequency, starts: start_date, until: end_date)
+    # recurrence = Montrose.daily(interval: frequency, between:start_date...end_date)
+    recurrence = Montrose.every(frequency.days, starts: start_date, until: end_date)
+
 
 
     recurrence.each do |date|
@@ -40,7 +41,10 @@ routine_workout = sorted_routine_workouts.shift
 
      if routine_workout.nil?
       puts "No more routine workouts available."
-      break
+      # Reset the routine workouts to the original order
+      sorted_routine_workouts = routine_workouts.sort_by { |workout| workout.order }
+      routine_workout = sorted_routine_workouts.shift
+      break if routine_workout.nil?  # If still nil, exit the loop
     end
 
     workout_id = routine_workout.id
