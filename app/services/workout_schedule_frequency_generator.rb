@@ -16,7 +16,7 @@ class WorkoutScheduleFrequencyGenerator
     last_schedule_date = routine.routine_workouts.flat_map(&:workout_schedules).maximum(:date) || Date.current
     puts "last_schedule_date : #{last_schedule_date}"
 
-    start_date = [last_schedule_date].max + 1.day
+    start_date = [last_schedule_date].max #+ 1.day
     end_date = start_date + WEEKS_AHEAD.weeks - 1.day
 
 

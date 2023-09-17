@@ -24,6 +24,7 @@ end
 #   render json: @routine.workouts
 # end
 
+
   # POST REQUESTS
   # /routines
   def create
