@@ -75,6 +75,8 @@ def add_exercise
   workout_exercise.sets = params[:sets]
   workout_exercise.reps = params[:reps]
   workout_exercise.weight = params[:weight]
+  workout_exercise.rest_timer = params[:rest]
+
 
   if workout_exercise .save
     render json: @workout
