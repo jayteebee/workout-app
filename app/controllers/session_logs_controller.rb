@@ -19,6 +19,8 @@ class SessionLogsController < ApplicationController
     end
   end
 
+  
+
   def update
     if @session_log.update(session_log_params)
       render json: @session_log
@@ -39,6 +41,6 @@ class SessionLogsController < ApplicationController
   end
 
   def session_log_params
-    params.require(:session_log).permit(:user_id, :details)
+    params.require(:session_log).permit(:user_id, details: {})
   end
 end
