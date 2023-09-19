@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_18_160810) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_19_114402) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -119,14 +119,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_18_160810) do
   end
 
   create_table "workout_sessions", force: :cascade do |t|
-    t.bigint "workout_id", null: false
+    t.bigint "routine_workout_id", null: false
     t.bigint "user_id", null: false
     t.datetime "date"
     t.integer "total_duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["routine_workout_id"], name: "index_workout_sessions_on_routine_workout_id"
     t.index ["user_id"], name: "index_workout_sessions_on_user_id"
-    t.index ["workout_id"], name: "index_workout_sessions_on_workout_id"
   end
 
   create_table "workouts", force: :cascade do |t|
@@ -150,6 +150,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_18_160810) do
   add_foreign_key "workout_schedules", "routine_workouts"
   add_foreign_key "workout_schedules", "users"
   add_foreign_key "workout_sessions", "users"
-  add_foreign_key "workout_sessions", "workouts"
+  add_foreign_key "workout_sessions", "workouts", column: "routine_workout_id"
   add_foreign_key "workouts", "users"
 end

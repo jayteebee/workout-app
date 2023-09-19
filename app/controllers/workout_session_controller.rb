@@ -59,6 +59,6 @@ class WorkoutSessionController < ApplicationController
     end
 
     def workout_session_params
-        params.require(:workout_session).permit(:user_id, :workout_id, :date, :total_duration)
+        params.require(:workout_session).permit(:user_id, :routine_workout_id, :date, :total_duration)
       end
 end
