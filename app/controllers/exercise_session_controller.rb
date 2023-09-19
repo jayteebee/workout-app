@@ -53,7 +53,7 @@ class ExerciseSessionController < ApplicationController
     end
 
     def exercise_session_params
-        params.require(:exercise_session).permit(:workout_session_id, :exercise_id, :sets_completed, :reps_completed, :weight_used)
+        params.require(:exercise_session).permit(:workout_session_id, :exercise_id, :sets_completed, :reps_completed, :weight_used, :set_timer)
       end
 
 end
