@@ -371,7 +371,7 @@
         ]
     },
     {
-        "name": "Bulgarian Split Squats",
+        "name": "Bodyweight Bulgarian Split Squats",
         "equipment_used": "Bodyweight",
         "primary_muscles": [
             "Legs",
@@ -385,7 +385,7 @@
         ]
     },
     {
-        "name": "Bulgarian Split Squats",
+        "name": "Dumbbell Bulgarian Split Squats",
         "equipment_used": "Dumbbells",
         "primary_muscles": [
             "Legs",
@@ -399,7 +399,7 @@
         ]
     },
     {
-        "name": "Bulgarian Split Squats",
+        "name": "Barbell Bulgarian Split Squats",
         "equipment_used": "Barbell",
         "primary_muscles": [
             "Legs",
