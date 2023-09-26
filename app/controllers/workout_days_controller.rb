@@ -31,7 +31,6 @@ class WorkoutDaysController < ApplicationController
     # /workout_days_frequency
     def frequency
       @workout_day = WorkoutDay.new(workout_day_params)
-puts "FREQUENCY ACTIVATED: #{workout_day_params}"
       if @workout_day.save
         # change to new one
         WorkoutScheduleFrequencyRegenerationJob.perform_async(@workout_day.user_id, @workout_day.routine_id)
