@@ -70,12 +70,12 @@ end
     end
   
     private
-      # Use callbacks to share common setup or constraints between actions.
+
       def set_workout_schedule
         @workout_schedule = WorkoutSchedule.find(params[:id])
       end
   
-      # Only allow a trusted parameter "white list" through.
+
       def workout_schedule_params
         params.require(:workout_schedule).permit(:user_id, :routine_workout_id, :date, :completed)
       end
