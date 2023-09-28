@@ -1,25 +1,30 @@
 class WorkoutDaysController < ApplicationController
 
     before_action :set_workout_day, only: [:show, :update, :destroy]
+    before_action :authenticate_user!
+
 
     # GET REQUESTS
     
     #  /workout_days
     def index
-      @workout_days = WorkoutDay.all
-  
+      @workout_days = current_user.workout_days
       render json: @workout_days
     end
   
     # /workout_days/1
     def show
-      render json: @workout_day
+      if @workout_day.user_id == current_user.id
+        render json: @workout_day
+      else
+        render json: { error: 'Unauthorized' }, status: :unauthorized
+      end
     end
   
     # POST REQUESTS
     # /workout_days
     def create
-      @workout_day = WorkoutDay.new(workout_day_params)
+      @workout_day = current_user.workout_days.build(workout_day_params)
       if @workout_day.save
         WorkoutScheduleRegenerationJob.perform_async(@workout_day.user_id, @workout_day.routine_id)
         render json: @workout_day, status: :created
@@ -27,12 +32,13 @@ class WorkoutDaysController < ApplicationController
         render json: @workout_day.errors, status: :unprocessable_entity
       end
     end
+  
 
     # /workout_days_frequency
     def frequency
-      @workout_day = WorkoutDay.new(workout_day_params)
+      @workout_day = current_user.workout_days.build(workout_day_params)
       if @workout_day.save
-        # change to new one
+        # Change to the new one
         WorkoutScheduleFrequencyRegenerationJob.perform_async(@workout_day.user_id, @workout_day.routine_id)
         render json: @workout_day, status: :created
       else
@@ -41,20 +47,29 @@ class WorkoutDaysController < ApplicationController
       end
     end
   
+  
     # PATCH/PUT REQUESTS
     #  /workout_days/1
     def update
-      if @workout_day.update(workout_day_params)
-        render json: @workout_day
+      if @workout_day.user_id == current_user.id
+        if @workout_day.update(workout_day_params)
+          render json: @workout_day
+        else
+          render json: @workout_day.errors, status: :unprocessable_entity
+        end
       else
-        render json: @workout_day.errors, status: :unprocessable_entity
+        render json: { error: 'Unauthorized' }, status: :unauthorized
       end
     end
   
     # DELETE REQUESTS
     # /workout_days/1
     def destroy
-      @workout_day.destroy
+      if @workout_day.user_id == current_user.id
+        @workout_day.destroy
+      else
+        render json: { error: 'Unauthorized' }, status: :unauthorized
+      end
     end
   
     private
