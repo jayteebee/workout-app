@@ -61,3 +61,4 @@ class ExercisesController < ApplicationController
     params.require(:exercise).permit(:name, :sets, :reps, :weight, :duration, :personal_best)
   end
 end
+
