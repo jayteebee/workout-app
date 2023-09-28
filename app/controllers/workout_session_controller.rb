@@ -1,23 +1,28 @@
 class WorkoutSessionController < ApplicationController
 
     before_action :set_workout_session, only: [:show, :update, :destroy ]
+    before_action :authenticate_user!
 
     # GET REQUESTS
     # /workout_session
     def index
-        @workout_sessions = WorkoutSession.all
+        @workout_sessions = current_user.workout_sessions.all
         render json: @workout_sessions
     end
 
     # /workout_session/1
     def show
+      if @workout_session.user_id == current_user.id
         render json: @workout_session
+      else
+        render json: {error: "Unauthorized"}, status: :Unauthorized
+      end
     end
 
     # POST REQUESTS
     # /workout_session
     def create
-        @workout_session = WorkoutSession.new(workout_session_params)
+        @workout_session = current_user.workout_sessions.new(workout_session_params)
 
         if @workout_session.save
             render json: @workout_session, status: :created
@@ -30,6 +35,7 @@ class WorkoutSessionController < ApplicationController
     # PATCH/PUT REQUESTS
     # /workout_session/1
     def update
+      if @workout_session.user_id == current_user.id
         if @workout_session.update(workout_session_params)
             if @workout_session.total_duration
                 SessionLog.create!(
@@ -37,19 +43,24 @@ class WorkoutSessionController < ApplicationController
                   details: @workout_session.as_json
                 )
               end
-            
-
             render json: @workout_session, status: :ok
           else
             render json: @workout_session.errors, status: :unprocessable_entity
           end
+        else
+          render json: { error: 'Unauthorized' }, status: :unauthorized
+        end
     end
 
 # DELETE REQUESTS   
 # /workout_session/1
     def destroy
+      if @workout_session.user_id == current_user.id
         @workout_session.destroy
+      else 
+        render json: { error: 'Unauthorized' }, status: :unauthorized
     end
+  end
 
     
     private
