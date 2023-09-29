@@ -6,6 +6,7 @@ class RoutinesController < ApplicationController
   # GET REQUESTS
   # /routines
   def index
+    puts " *************************** #{current_user}"
     @routines = current_user.routines
     render json: @routines
   end
