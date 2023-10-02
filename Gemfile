@@ -15,7 +15,7 @@ gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 
 # sidekiq
-gem "sidekiq"
+gem "sidekiq", '>= 0'
 
 # sidekiq-cron
 gem "sidekiq-cron"
