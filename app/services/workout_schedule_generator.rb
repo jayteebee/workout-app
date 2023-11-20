@@ -98,7 +98,7 @@ class WorkoutScheduleGenerator
           puts "ERROR: #{workout_schedule.errors.full_messages}"
         end
     
-        # Put the routine workout back into the mapping for the next occurrence
+        # Put the rou redistine workout back into the mapping for the next occurrence
         day_to_workout_mapping[day_symbol] << routine_workout
       else
         puts "No routine workout assigned for date: #{date}"

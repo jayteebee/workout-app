@@ -16,7 +16,7 @@ gem "puma", "~> 5.0"
 
 # sidekiq
 gem "sidekiq", '>= 0'
-
+ 
 # sidekiq-cron
 gem "sidekiq-cron"
 

@@ -23,28 +23,28 @@ class WorkoutDaysController < ApplicationController
   
     # POST REQUESTS
     # /workout_days
-    # def create
-    #   @workout_day = current_user.workout_days.new(workout_day_params)
-    #   if @workout_day.save
-    #     WorkoutScheduleRegenerationJob.perform_async(@workout_day.user_id, @workout_day.routine_id)
-    #     render json: @workout_day, status: :created
-    #   else
-    #     render json: @workout_day.errors, status: :unprocessable_entity
-    #   end
-    # end
+    def create
+      @workout_day = current_user.workout_days.new(workout_day_params)
+      if @workout_day.save
+        WorkoutScheduleRegenerationJob.perform_async(@workout_day.user_id, @workout_day.routine_id)
+        render json: @workout_day, status: :created
+      else
+        render json: @workout_day.errors, status: :unprocessable_entity
+      end
+    end
   
 
-    # /workout_days_frequency
-    # def frequency
-    #   @workout_day = current_user.workout_days.new(workout_day_params)
-    #   if @workout_day.save
-    #     WorkoutScheduleFrequencyRegenerationJob.perform_async(@workout_day.user_id, @workout_day.routine_id)
-    #     render json: @workout_day, status: :created
-    #   else
-    #     @workout_day.errors.add(:base, "Error")
-    #     render json: @workout_day.errors, status: :unprocessable_entity
-    #   end
-    # end
+    # workout_days_frequency
+    def frequency
+      @workout_day = current_user.workout_days.new(workout_day_params)
+      if @workout_day.save
+        WorkoutScheduleFrequencyRegenerationJob.perform_async(@workout_day.user_id, @workout_day.routine_id)
+        render json: @workout_day, status: :created
+      else
+        @workout_day.errors.add(:base, "Error")
+        render json: @workout_day.errors, status: :unprocessable_entity
+      end
+    end
   
   
     # PATCH/PUT REQUESTS
@@ -105,10 +105,11 @@ end
 #   end
 
 #   # POST REQUESTS
-#   # /workout_days
+#   /workout_days
 #   def create
 #     @workout_day = WorkoutDay.new(workout_day_params)
 #     if @workout_day.save
+      
 #       WorkoutScheduleRegenerationJob.perform_async(@workout_day.user_id, @workout_day.routine_id)
 #       render json: @workout_day, status: :created
 #     else
