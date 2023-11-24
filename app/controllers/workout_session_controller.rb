@@ -111,7 +111,8 @@ class WorkoutSessionController < ApplicationController
           if @workout_session.total_duration
               SessionLog.create!(
                 user_id: @workout_session.user_id,
-                details: @workout_session.as_json
+                details: @workout_session.as_json,
+                workout_name: @workout_session.workout_name
               )
             end
           
@@ -136,6 +137,6 @@ class WorkoutSessionController < ApplicationController
   end
 
   def workout_session_params
-      params.require(:workout_session).permit(:user_id, :routine_workout_id, :date, :total_duration)
+      params.require(:workout_session).permit(:user_id, :routine_workout_id, :date, :total_duration, :workout_name)
     end
 end
