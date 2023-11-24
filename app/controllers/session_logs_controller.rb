@@ -104,6 +104,6 @@ class SessionLogsController < ApplicationController
   end
 
   def session_log_params
-    params.require(:session_log).permit(:user_id, details: {})
+    params.require(:session_log).permit(:user_id, details: {}, :workout_name)
   end
 end
