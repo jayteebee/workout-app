@@ -80,7 +80,7 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-# OLD DB
+# OLD DBALTER TABLE exercise_sessions ADD COLUMN set_timer integer;
 # production:
 #   <<: *default
 #   database: workout_app_production_nakq
