@@ -80,12 +80,20 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+# production:
+#   <<: *default
+#   database: workout_app_production_nakq
+#   username: workout_app
+#   password: jbjbjb3 
+#   host: dpg-ck2raub6fquc73ej43q0-a
+#   port: 5432
+
 production:
   <<: *default
-  database: workout_app_production_nakq
-  username: workout_app
-  password: jbjbjb3 
-  host: dpg-ck2raub6fquc73ej43q0-a
+  database: d2tsso24384v1a
+  username: htxlvblhncoqwy
+  password: c09b1a020928ff68ae7e8f0f5a444faeee76529dae8fed037413efaf148a0f2b
+  host: ec2-34-202-53-101.compute-1.amazonaws.com
   port: 5432
   
   
