@@ -26,6 +26,8 @@ class WorkoutDaysController < ApplicationController
     def create
       @workout_day = current_user.workout_days.new(workout_day_params)
       if @workout_day.save
+    return unless @workout_day.user_id && @workout_day.routine_id
+
         WorkoutScheduleRegenerationJob.perform_async(@workout_day.user_id, @workout_day.routine_id)
         render json: @workout_day, status: :created
       else
