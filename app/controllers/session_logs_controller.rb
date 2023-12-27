@@ -65,7 +65,8 @@ class SessionLogsController < ApplicationController
   before_action :set_session_log, only: [:show, :update, :destroy]
 
   def index
-    @session_logs = SessionLog.all
+    # @session_logs = SessionLog.all
+    @session_logs = current_user.session_logs
     render json: @session_logs
   end
 
@@ -74,7 +75,8 @@ class SessionLogsController < ApplicationController
   end
 
   def create
-    @session_log = SessionLog.new(session_log_params)
+    # @session_log = SessionLog.new(session_log_params)
+    @session_log = current_user.session_logs.build(session_log_params)
     if @session_log.save
       render json: @session_log, status: :created
     else
@@ -100,7 +102,8 @@ class SessionLogsController < ApplicationController
   private
 
   def set_session_log
-    @session_log = SessionLog.find(params[:id])
+    # @session_log = SessionLog.find(params[:id])
+    @session_log = current_user.session_logs.find(params[:id])
   end
 
   def session_log_params
