@@ -105,7 +105,9 @@ class WorkoutSchedulesController < ApplicationController
   # GET REQUESTS
   #  /workout_schedules
   def index
-    @workout_schedules = WorkoutSchedule.includes(routine_workout: :workout).all
+  #  add this line
+  @workout_schedules = current_user.workout_schedules.includes(routine_workout: :workout)
+    # @workout_schedules = WorkoutSchedule.includes(routine_workout: :workout).all
 
     response_data = @workout_schedules.map do |schedule|
       {
@@ -142,7 +144,8 @@ end
   # POST REQUESTS
   #  /workout_schedules
   def create
-    @workout_schedule = WorkoutSchedule.new(workout_schedule_params)
+    # modified this line to include current_user method
+    @workout_schedule = current_user.workout_schedules.build(workout_schedule_params)
 
     if @workout_schedule.save
       render json: @workout_schedule, status: :created
@@ -172,7 +175,9 @@ end
   private
 
     def set_workout_schedule
-      @workout_schedule = WorkoutSchedule.find(params[:id])
+    #  add this line
+    @workout_schedule = current_user.workout_schedules.find(params[:id])
+      # @workout_schedule = WorkoutSchedule.find(params[:id])
     end
 
 

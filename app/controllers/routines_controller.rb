@@ -130,31 +130,53 @@ class RoutinesController < ApplicationController
 
   # GET REQUESTS
   # /routines
-  def index
-    @routines = Routine.all
+  # def index
+  #   @routines = Routine.all
 
+  #   render json: @routines
+  # end
+
+  def index
+    @routines = current_user.routines
     render json: @routines
   end
 
   # /routines/1
+  # def show
+  #   render json: @routine
+  # end
   def show
+    @routine = current_user.routines.find(params[:id])
     render json: @routine
   end
 
 # /routines/1/workouts
-def workouts
-  @routine_workouts = @routine.routine_workouts.includes(:workout)
-  render json: @routine_workouts.as_json(include: {routine: {only: :name}, workout: {}})
-end
 # def workouts
-#   render json: @routine.workouts
+#   @routine_workouts = @routine.routine_workouts.includes(:workout)
+#   render json: @routine_workouts.as_json(include: {routine: {only: :name}, workout: {}})
 # end
+
+def workouts
+  @routine = current_user.routines.find(params[:routine_id])
+  @routine_workouts = @routine.routine_workouts.includes(:workout)
+  render json: @routine_workouts.as_json(include: { routine: { only: :name }, workout: {} })
+end
 
 
   # POST REQUESTS
   # /routines
+  # def create
+  #   @routine = Routine.new(routine_params)
+
+  #   if @routine.save
+  #     render json: @routine, status: :created, location: @routine
+  #   else
+  #     render json: @routine.errors, status: :unprocessable_entity
+  #   end
+  # end
+
   def create
-    @routine = Routine.new(routine_params)
+    @routine = current_user.routines.build(routine_params)
 
     if @routine.save
       render json: @routine, status: :created, location: @routine
@@ -166,6 +188,9 @@ end
   # PATCH/PUT REQUESTS
   # /routines/1
   def update
+    # added this line
+    @routine = current_user.routines.find(params[:id])
+
     if @routine.update(routine_params)
       render json: @routine
     else
@@ -175,6 +200,9 @@ end
 
   # /routines/1/workouts
 def add_workout
+      # added this line
+      @routine = current_user.routines.find(params[:routine_id])
+
   @workout = Workout.find(params[:workout_id])
   @routine.routine_workouts.create(workout: @workout, order: params[:order], day: params[:day])
   if @routine.save
@@ -197,11 +225,16 @@ end
   # DELETE REQUESTS
   # /routines/1
   def destroy
+    # added this line
+    @routine = current_user.routines.find(params[:routine_id])
     @routine.destroy
     render json: { message: 'Routine deleted successfully' }
   end
 
 def delete_workout
+      # added this line
+      @routine = current_user.routines.find(params[:id])
+
   @workout = Workout.find(params[:workout_id])
   routine_workout = RoutineWorkout.find_by(routine: @routine, workout: @workout)
   if routine_workout
