@@ -226,7 +226,7 @@ end
   # /routines/1
   def destroy
     # added this line
-    @routine = current_user.routines.find(params[:routine_id])
+    @routine = current_user.routines.find(params[:id])
     @routine.destroy
     render json: { message: 'Routine deleted successfully' }
   end
