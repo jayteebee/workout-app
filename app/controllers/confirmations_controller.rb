@@ -1,5 +1,4 @@
 class ConfirmationsController < Devise::ConfirmationsController
-    protected
 
       # GET /confirmation?confirmation_token=abcdef
 #   def show
@@ -20,8 +19,8 @@ def confirm_account
     #     'localhost:3000/'
     # end
     
-    def redirect_to_frontend
-        redirect_to "https://workout-app-fe-five.vercel.app/GettingStarted"
-      end
+    # def redirect_to_frontend
+    #     redirect_to "https://workout-app-fe-five.vercel.app/GettingStarted"
+    #   end
 
 end
