@@ -5,3 +5,7 @@ class ConfirmationsController < Devise::ConfirmationsController
         'localhost:3000/'
     end
 end
+
+def redirect_to_frontend
+    redirect_to "https://workout-app-fe-five.vercel.app/GettingStarted"
+  end

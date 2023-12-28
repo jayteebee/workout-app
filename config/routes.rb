@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  get '/confirmation', to: 'confirmations#redirect_to_frontend'
+
   resources :exercises
   resources :workouts
   get '/workouts/:workout_id/exercises', to: 'workouts#exercises'
