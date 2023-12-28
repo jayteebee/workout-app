@@ -34,7 +34,7 @@ class MyDeviseMailer < Devise::Mailer
       @token = token
       # Manually construct the URL
     #   base_url = "https://workout-app-fe-five.vercel.app/GettingStarted/confirmation"
-    base_url = ENV['FRONTEND_URL']
+    base_url = ENV['FRONTEND_URL'] || "http://localhost:3000/GettingStarted/confirmation"
       @confirmation_url = "#{base_url}?confirmation_token=#{@token}"
   
       body = "Hello, please confirm your account by clicking the following link: 
