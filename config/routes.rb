@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   # get '/confirm_account', to: 'confirmations#confirm_account'
 
   devise_scope :user do
-    get '/confirm_account', to: 'confirmations#confirm_account'
+    post '/confirm_account', to: 'confirmations#confirm_account'
   end
 
 
