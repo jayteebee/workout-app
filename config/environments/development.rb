@@ -53,8 +53,17 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
-  config.action_mailer.default_url_options = { host: 'localhost', port: 4000 }
-
+  config.action_mailer.default_url_options = { host: 'http://localhost:3000/GettingStarted', port: 4000 }
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  address: 'smtp.sendgrid.net',
+  port: 587,
+  domain: 'jethroblock.com',
+  user_name: 'apikey',
+  password: ENV['SENDGRID_API_KEY'],
+  authentication: 'plain',
+  enable_starttls_auto: true
+}
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
