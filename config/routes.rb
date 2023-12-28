@@ -18,8 +18,6 @@ Rails.application.routes.draw do
     confirmations: 'confirmations'
   }
 
-  # get '/confirmation', to: 'confirmations#redirect_to_frontend'
-  # get '/confirm_account', to: 'confirmations#confirm_account'
 
   devise_scope :user do
     post '/confirm_account', to: 'confirmations#confirm_account'
