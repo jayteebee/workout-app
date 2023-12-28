@@ -18,8 +18,8 @@ Rails.application.routes.draw do
     confirmations: 'confirmations'
   }
 
-  get '/confirmation', to: 'confirmations#redirect_to_frontend'
-  post '/confirm_account', to: 'confirmations#confirm_account'
+  # get '/confirmation', to: 'confirmations#redirect_to_frontend'
+  get '/confirm_account', to: 'confirmations#confirm_account'
 
 
   resources :exercises
