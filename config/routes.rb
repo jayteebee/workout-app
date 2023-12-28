@@ -19,7 +19,11 @@ Rails.application.routes.draw do
   }
 
   # get '/confirmation', to: 'confirmations#redirect_to_frontend'
-  get '/confirm_account', to: 'confirmations#confirm_account'
+  # get '/confirm_account', to: 'confirmations#confirm_account'
+
+  devise_scope :user do
+    get '/confirm_account', to: 'confirmations#confirm_account'
+  end
 
 
   resources :exercises
