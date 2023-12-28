@@ -56,12 +56,12 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "workout_app_production"
 
   config.action_mailer.perform_caching = false
-config.action_mailer.default_url_options = { host: 'jethroblock.com' }
+config.action_mailer.default_url_options = { host: 'https://workout-app-fe-five.vercel.app/GettingStarted' }
   config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
   address: 'smtp.sendgrid.net',
   port: 587,
-  domain: 'your_domain.com',
+  domain: 'jethroblock.com',
   user_name: 'apikey',
   password: ENV['SENDGRID_API_KEY'],
   authentication: 'plain',
