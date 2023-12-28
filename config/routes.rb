@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   },
   controllers: {
     sessions: 'users/sessions',
-    registrations: 'users/registrations'
+    registrations: 'users/registrations',
+    confirmations: 'confirmations'
   }
 
   get '/confirmation', to: 'confirmations#redirect_to_frontend'
