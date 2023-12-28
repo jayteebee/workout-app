@@ -2,7 +2,8 @@ class ConfirmationsController < Devise::ConfirmationsController
     protected
 
       # GET /confirmation?confirmation_token=abcdef
-  def show
+#   def show
+def confirm_account
     self.resource = resource_class.confirm_by_token(params[:confirmation_token])
 
     if resource.errors.empty?
