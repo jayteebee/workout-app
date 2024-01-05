@@ -160,7 +160,7 @@ class WorkoutsController < ApplicationController
   # GET Requests
   # /workouts
   def index
-    @workouts = Workout.all
+    @workouts = current_user.workouts.all
 
     render json: @workouts
   end
@@ -185,7 +185,7 @@ end
   # POST REQUESTS
   # /workouts
   def create
-    @workout = Workout.new(workout_params)
+    @workout = current_user.workouts.new(workout_params)
 
     if @workout.save
       render json: @workout, status: :created, location: @workout
@@ -265,7 +265,7 @@ end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_workout_for_show_update_destroy
-      @workout = Workout.find(params[:id])
+      @workout = current_user.workouts.find(params[:id])
     end
     
     def set_workout_for_nested_resources
