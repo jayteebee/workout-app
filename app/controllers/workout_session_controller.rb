@@ -82,7 +82,7 @@ class WorkoutSessionController < ApplicationController
   # GET REQUESTS
   # /workout_session
   def index
-      @workout_sessions = WorkoutSession.all
+      @workout_sessions = current_user.workout_sessions.all
       render json: @workout_sessions
   end
 
@@ -94,7 +94,7 @@ class WorkoutSessionController < ApplicationController
   # POST REQUESTS
   # /workout_session
   def create
-      @workout_session = WorkoutSession.new(workout_session_params)
+      @workout_session = current_user.workout_sessions.new(workout_session_params)
 
       if @workout_session.save
           render json: @workout_session, status: :created
@@ -133,7 +133,7 @@ class WorkoutSessionController < ApplicationController
   private
 
   def set_workout_session
-      @workout_session = WorkoutSession.find(params[:id])
+      @workout_session = current_user.workout_sessions.find(params[:id])
   end
 
   def workout_session_params
